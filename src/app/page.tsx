@@ -29,7 +29,7 @@ export default function Home() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-[1400px] mx-auto"
           >
-            <h1 className="font-serif text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] mb-5">
+            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[0.95] mb-5">
               On coud ensemble.
             </h1>
             <p className="text-white/80 text-base md:text-lg max-w-md leading-relaxed">
@@ -98,8 +98,8 @@ export default function Home() {
                   5 places max, réservation obligatoire.
                   Tu repars avec ton objet fini !
                 </p>
-                <Link href="/rejoindre" className="text-sm font-semibold text-accent hover:underline underline-offset-4">
-                  Réserver ma place →
+                <Link href="/rejoindre" className="inline-block w-full text-center md:w-auto text-sm font-semibold bg-accent-soft text-accent px-6 py-3 rounded-full hover:bg-accent hover:text-white transition-all">
+                  Réserver ma place
                 </Link>
               </div>
             </motion.div>
@@ -131,8 +131,8 @@ export default function Home() {
                   utiliser la machine, enfiler le fil, préparer une canette,
                   coudre droit. Tranquille, sans pression.
                 </p>
-                <Link href="/rejoindre" className="text-sm font-semibold text-accent hover:underline underline-offset-4">
-                  S'inscrire →
+                <Link href="/rejoindre" className="inline-block w-full text-center md:w-auto text-sm font-semibold bg-foreground/5 text-foreground px-6 py-3 rounded-full hover:bg-foreground hover:text-white transition-all">
+                  S'inscrire gratuitement
                 </Link>
               </div>
             </motion.div>
@@ -166,24 +166,35 @@ export default function Home() {
             <h3 className="font-serif text-2xl md:text-3xl mb-2">
               On est à l'Info Lab Orléans
             </h3>
-            <p className="text-sm text-muted max-w-md leading-relaxed">
-              Un espace partagé où la tech rencontre l'artisanat.
-              Nos machines à coudre ont trouvé leur place au milieu
-              des imprimantes 3D et des ordinateurs !
+            <p className="text-sm text-muted max-w-md leading-relaxed mb-4">
+              Un espace partagé où la tech rencontre l'artisanat.<br />
+              <span className="text-foreground font-semibold">3 rue de la Cholerie, 45000 Orléans</span>
             </p>
+            <div className="flex flex-wrap gap-4 items-center">
+              <a
+                href="https://www.instagram.com/alunisson.orleans/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-white text-accent font-semibold text-sm
+                           px-6 py-3 rounded-full border border-accent/20 hover:bg-accent hover:text-white
+                           transition-all duration-300 shadow-sm whitespace-nowrap"
+              >
+                @alunisson.orleans
+              </a>
+              <a 
+                href="https://www.google.com/maps/dir//3+rue+de+la+Cholerie+45000+Orléans" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-muted hover:text-accent transition-colors underline underline-offset-4"
+              >
+                Voir sur Maps →
+              </a>
+            </div>
           </div>
-          <a
-            href="https://www.instagram.com/infolaborleans/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-white text-accent font-semibold text-sm
-                       px-6 py-3 rounded-full border border-accent/20 hover:bg-accent hover:text-white
-                       transition-all duration-300 shadow-sm whitespace-nowrap"
-          >
-            @infolaborleans
-          </a>
         </div>
       </section>
+
+
 
       {/* ═══ CTA CHALEUREUX ═══ */}
       <section className="w-full py-16 md:py-24 px-6 border-b border-border">
@@ -229,6 +240,8 @@ export default function Home() {
           </div>
         </section>
       )}
+
+
 
       {/* ═══ NEWSLETTER ═══ */}
       <section className="w-full py-20 px-6 md:px-10 bg-accent-soft rounded-t-[2rem] mt-4">

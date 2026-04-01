@@ -30,7 +30,7 @@ export default function RejoindrePage() {
             transition={{ duration: 0.6 }}
             className="mb-14"
           >
-            <h1 className="font-serif text-5xl md:text-7xl mb-6">
+            <h1 className="font-serif text-4xl md:text-7xl mb-6">
               Réserve ton atelier
             </h1>
             <p className="text-muted text-base max-w-lg leading-relaxed">

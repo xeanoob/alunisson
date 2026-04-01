@@ -17,7 +17,7 @@ export default function AteliersPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-serif text-5xl md:text-7xl mb-6">
+            <h1 className="font-serif text-4xl md:text-7xl mb-6">
               Nos ateliers
             </h1>
             <p className="text-muted text-base max-w-lg leading-relaxed">
@@ -79,8 +79,8 @@ export default function AteliersPage() {
 
               <Link
                 href="/rejoindre"
-                className="self-start bg-accent text-white font-semibold text-sm
-                           px-8 py-3 rounded-full hover:bg-foreground transition-colors duration-300 shadow-sm"
+                className="w-full text-center md:self-start bg-accent text-white font-semibold text-sm
+                           px-8 py-4 rounded-full hover:bg-foreground transition-all duration-300 shadow-sm"
               >
                 Réserver une place
               </Link>
@@ -131,9 +131,9 @@ export default function AteliersPage() {
 
               <Link
                 href="/rejoindre"
-                className="self-start text-sm font-semibold text-accent hover:underline underline-offset-4"
+                className="w-full text-center md:self-start text-sm font-semibold bg-accent-soft text-accent px-8 py-4 rounded-full hover:bg-accent hover:text-white transition-all shadow-sm"
               >
-                S'inscrire à une initiation →
+                S'inscrire à une initiation
               </Link>
             </div>
             <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden md:order-2 order-1">

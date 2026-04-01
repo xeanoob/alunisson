@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
+import { BottomNav } from "@/components/ui/BottomNav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -14,9 +15,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Alunisson — Couture pour tous · Orléans",
+  title: "Alunisson — Cours & Ateliers de Couture à Orléans (45)",
   description:
-    "Association de couture ouverte à tous à Orléans. Ateliers, machines, tissus wax et communauté créative.",
+    "Apprenez la couture à Orléans avec Alunisson. Ateliers débutants, machines en libre-service, tissus wax et projets créatifs dans le Loiret. Rejoignez notre communauté !",
 };
 
 export default function RootLayout({
@@ -26,10 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased min-h-screen">
         <SmoothScroll>
-          {children}
+          <div className="pb-16 md:pb-0">
+            {children}
+          </div>
         </SmoothScroll>
+        <BottomNav />
       </body>
     </html>
   );

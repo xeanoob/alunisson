@@ -9,6 +9,7 @@
   --color-border: #EDE6DC;
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
+  --safe-area-bottom: env(safe-area-inset-bottom);
 }
 
 body {
