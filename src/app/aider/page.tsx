@@ -10,7 +10,7 @@ export default function AiderPage() {
       <Navbar />
 
       {/* Header */}
-      <section className="pt-28 pb-16 px-6 md:px-10">
+      <section className="pt-28 pb-10 px-6 md:px-10">
         <div className="max-w-[1400px] mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -28,22 +28,40 @@ export default function AiderPage() {
         </div>
       </section>
 
+      {/* Image Illustration */}
+      <section className="px-6 md:px-10 pb-16">
+        <div className="max-w-[1000px] mx-auto h-[300px] md:h-[450px] relative rounded-[2.5rem] overflow-hidden shadow-2xl offset-hand-1 border-[10px] border-white">
+          <Image 
+            src="/tissus_table.jpg" 
+            alt="Table de tissus chez Alunisson" 
+            fill 
+            className="object-cover" 
+          />
+        </div>
+      </section>
+
       {/* ═══ CARTES D'ACTION ═══ */}
       <section className="px-6 md:px-10 pb-20">
         <div className="max-w-[700px] mx-auto text-center">
           
           {/* Don de matériel */}
-          <div className="p-8 md:p-12 border border-border rounded-3xl bg-white flex flex-col items-center gap-6 shadow-sm">
-            <div className="w-16 h-16 rounded-full bg-accent-soft flex items-center justify-center text-accent">
+          <div className="p-8 md:p-12 border border-border rounded-3xl bg-white flex flex-col items-center gap-6 shadow-xl stitched offset-hand-1">
+            <div className="w-16 h-16 rounded-full bg-accent-soft flex items-center justify-center text-accent offset-hand-2">
               <Scissors size={32} />
             </div>
             <div className="text-center">
-              <h3 className="font-serif text-3xl mb-4">Dons de matériel</h3>
-              <p className="text-muted leading-relaxed max-w-md mx-auto">
-                Tu as des chutes de tissus (même petites !), des bobines de fils, ou une machine à coudre dont tu ne te sers plus ? 
-                On les récupère avec joie pour nos ateliers gratuits et nos initiations. 
-                <br /><br />
-                <span className="font-semibold text-foreground italic">Dépôt possible pendant nos créneaux à l'Info Lab (3 rue de la Cholerie).</span>
+              <h3 className="font-serif text-3xl md:text-4xl mb-4 italic">Dons de matériel</h3>
+              <p className="text-muted leading-relaxed max-w-md mx-auto italic mb-6">
+                "Tu as des chutes de tissus (même petites !), des bobines de fils, ou une machine à coudre dont tu ne te sers plus ?"
+              </p>
+              <div className="bg-accent-soft/30 p-6 rounded-2xl border border-accent/10 offset-hand-3">
+                <p className="text-sm text-foreground font-medium leading-relaxed">
+                  On les récupère avec joie pour nos ateliers gratuits et nos initiations. 
+                  Donne-leur une seconde vie dans les mains de nos participants !
+                </p>
+              </div>
+              <p className="mt-8 text-xs font-bold uppercase tracking-widest text-accent">
+                Dépôt possible à l'Info Lab (3 rue de la Cholerie).
               </p>
             </div>
           </div>

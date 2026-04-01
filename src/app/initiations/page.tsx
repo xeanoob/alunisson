@@ -17,10 +17,15 @@ export default function InitiationsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-bold text-accent uppercase tracking-widest mb-4 block">Gratuit / Débutant</span>
-            <h1 className="font-serif text-4xl md:text-7xl mb-6">
-              Nos initiations
-            </h1>
+            <div className="relative inline-block">
+              <span className="text-xs font-bold text-wax-teal uppercase tracking-widest mb-4 block">Gratuit / Débutant</span>
+              <h1 className="font-serif text-4xl md:text-7xl mb-6">
+                Nos initiations
+              </h1>
+              <span className="absolute -top-10 -right-16 font-hand text-wax-orange rotate-12 text-2xl hidden md:block">
+                C'est facile, promis !
+              </span>
+            </div>
             <p className="text-muted text-base max-w-lg leading-relaxed">
               Tu n'as jamais touché une machine à coudre ? Pas de panique. 
               On t'apprend les bases en douceur pour te donner le super-pouvoir du faire soi-même.
@@ -32,24 +37,24 @@ export default function InitiationsPage() {
       {/* ═══ LE CONTENU ═══ */}
       <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[1400px] mx-auto">
-          <div className="bg-white rounded-2xl overflow-hidden border border-border grid grid-cols-1 md:grid-cols-2">
+          <div className="bg-white rounded-3xl overflow-hidden stitched grid grid-cols-1 md:grid-cols-2 shadow-xl offset-hand-1">
             <div className="flex flex-col justify-center p-8 md:p-12 md:order-1 order-2">
               <div className="flex items-center gap-2 mb-5">
-                <span className="text-xs bg-foreground text-background px-3 py-1 rounded-full font-semibold">
+                <span className="text-xs bg-wax-teal text-white px-4 py-1.5 rounded-sm font-bold rotate-1 shadow-sm">
                   100% Gratuit
                 </span>
-                <span className="text-xs text-muted font-semibold">
-                  Toutes les semaines
+                <span className="text-xs text-wax-orange font-hand text-lg -rotate-2 translate-x-2">
+                  Zéro pression.
                 </span>
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl mb-4">Apprendre les bases</h2>
+              <h2 className="font-serif text-3xl md:text-5xl mb-4 italic">Apprendre les bases</h2>
               <p className="text-muted text-sm leading-relaxed mb-6 max-w-md">
                 Pas de création ici — on se concentre sur la technique pure. 
                 Apprivoiser la machine (Brother), enfiler le fil de dessus et de dessous, 
                 préparer une canette, et réussir tes premières coutures droites.
               </p>
 
-              <div className="flex flex-col gap-3 mb-10 bg-accent-soft rounded-xl p-6">
+              <div className="flex flex-col gap-3 mb-10 bg-accent-soft rounded-2xl p-6 border border-accent/10 offset-hand-3">
                 {[
                   "Matériel entièrement fourni",
                   "Machines à coudre sur place",
@@ -59,23 +64,23 @@ export default function InitiationsPage() {
                 ].map((text) => (
                   <div key={text} className="flex items-center gap-3 text-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                    <span className="text-foreground">{text}</span>
+                    <span className="text-foreground font-medium">{text}</span>
                   </div>
                 ))}
               </div>
 
               <Link
                 href="/rejoindre"
-                className="w-full text-center md:self-start bg-accent text-white font-semibold text-sm
-                           px-10 py-4 rounded-full hover:bg-foreground transition-all duration-300 shadow-sm"
+                className="w-full text-center md:self-start bg-wax-yellow text-foreground font-bold text-sm
+                           px-10 py-5 rounded-full hover:bg-foreground hover:text-white transition-all duration-300 shadow-xl offset-hand-1"
               >
                 Réserver mon initiation
               </Link>
             </div>
-            <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden md:order-2 order-1">
+            <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden md:order-2 m-4 rounded-xl shadow-lg border-2 border-white">
               <Image
-                src="/enfant_groupe.jpg"
-                alt="Atelier d'initiation couture avec les enfants"
+                src="/machine_zoom.png"
+                alt="Gros plan sur une machine à coudre — Alunisson"
                 fill
                 className="object-cover scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"

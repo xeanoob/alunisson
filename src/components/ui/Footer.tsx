@@ -61,21 +61,24 @@ export function Footer() {
         </div>
 
         {/* Contact & Location */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 relative">
           <h4 className="font-serif text-lg font-semibold lg:text-xl">Nous trouver</h4>
           <div className="flex flex-col gap-3">
             <div className="flex gap-3">
-              <MapPin size={18} className="text-accent flex-shrink-0" />
+              <MapPin size={18} className="text-wax-teal flex-shrink-0" />
               <p className="text-sm text-muted">
                 Info Lab Orléans<br />
                 3 rue de la Cholerie<br />
                 45000 Orléans
               </p>
             </div>
-            <Link href="/rejoindre" className="inline-block mt-2 text-sm font-bold text-accent hover:underline underline-offset-4">
+            <Link href="/rejoindre" className="inline-block mt-2 text-sm font-bold text-wax-teal hover:underline underline-offset-4">
               Nous contacter →
             </Link>
           </div>
+          <span className="absolute -bottom-10 right-0 font-hand text-wax-orange rotate-3 text-xl hidden lg:block">
+            On se voit là-bas !
+          </span>
         </div>
 
       </div>
@@ -84,8 +87,8 @@ export function Footer() {
         <p className="text-[10px] text-muted uppercase tracking-widest">
           © {new Date().getFullYear()} Association Alunisson · Orléans (45)
         </p>
-        <p className="text-[10px] text-muted/60 lowercase italic">
-          Design épuré pour une couture durable
+        <p className="text-[10px] text-muted/60 lowercase font-hand text-lg">
+          Fait avec passion et quelques épingles.
         </p>
       </div>
     </footer>

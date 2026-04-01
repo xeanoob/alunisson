@@ -10,33 +10,60 @@ export default function Home() {
     <main className="w-full">
       <Navbar />
 
-      {/* ═══ OUVERTURE — Photo + titre chaleureux ═══ */}
-      <section className="relative h-[85vh] md:h-[92vh] w-full overflow-hidden rounded-b-[2rem] md:rounded-b-[3rem]">
-        <Image
-          src="/equipe_sac.jpg"
-          alt="L'équipe Alunisson avec leurs créations en tissu wax"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+      {/* ═══ HERO PLEIN ÉCRAN ═══ */}
+      <section className="relative w-full h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image Immersive */}
+        <div className="absolute inset-0">
+          <Image
+            src="/equipe_sac.jpg"
+            alt="L'équipe Alunisson — Partage et Création"
+            fill
+            className="object-cover scale-105"
+            priority
+            sizes="100vw"
+          />
+          {/* Overlay dégradé doux pour la lisibilité */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
+        </div>
 
-        <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 lg:p-16">
+        {/* Contenu Centré */}
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-[1400px] mx-auto"
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[0.95] mb-5">
-              La couture pour tous.
-            </h1>
-            <p className="text-white/80 text-base md:text-lg max-w-md leading-relaxed">
-              Association de couture ouverte à tous, à Orléans.
-              Ateliers créatifs, initiations gratuites et bonne humeur
-              — le tout à l'Info Lab !
-            </p>
+            <div className="flex flex-col items-center">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/50 mb-6 border-b border-white/10 pb-2">
+                Association Couture Orléans
+              </span>
+              <div className="relative inline-block text-center">
+                <h1 className="font-serif text-white text-6xl sm:text-8xl md:text-[10rem] leading-none mb-8 drop-shadow-2xl">
+                  La couture <br />
+                  <span className="italic text-wax-yellow">pour tous.</span>
+                </h1>
+                <span className="absolute -top-6 -right-12 font-hand text-wax-yellow rotate-12 text-xl sm:text-2xl hidden sm:block">
+                  Le fil de la solidarité
+                </span>
+              </div>
+            </div>
+            
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/rejoindre"
+                className="w-full sm:w-auto bg-accent text-white px-12 py-5 rounded-full font-bold
+                           hover:bg-white hover:text-accent transition-all duration-500 shadow-2xl scale-100 hover:scale-105"
+              >
+                Réserver un atelier
+              </Link>
+              <Link
+                href="/ateliers"
+                className="w-full sm:w-auto text-white/90 font-semibold border-b-0 sm:border-b border-white/30 
+                           hover:border-white transition-colors py-1 text-sm tracking-widest uppercase"
+              >
+                Découvrir l'association
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -63,76 +90,84 @@ export default function Home() {
       {/* ═══ LES DEUX ATELIERS ═══ */}
       <section className="w-full px-6 md:px-10 pb-12">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex items-baseline justify-between mb-10">
-            <h2 className="font-serif text-3xl md:text-4xl">Nos ateliers</h2>
-            <Link href="/ateliers" className="text-sm text-accent hover:underline underline-offset-4 font-medium">
-              Tout savoir →
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl">
+              <span className="text-accent font-serif italic text-lg mb-2 block">Dès 8 ans, pour tous.</span>
+              <h2 className="font-serif text-4xl md:text-6xl">
+                Viens coudre avec nous.
+              </h2>
+            </div>
+            <Link 
+              href="/ateliers" 
+              className="text-sm font-bold uppercase tracking-widest border-b-2 border-accent pb-1 hover:text-accent transition-colors"
+            >
+              Voir tous les formats →
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Atelier Alunisson */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+            {/* Atelier Créatif */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="group bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg hover:shadow-accent/5 transition-all duration-500"
+              className="group relative"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
                 <Image
-                  src="/equipe_sac.jpg"
-                  alt="Participants fiers avec leurs sacs"
+                  src="/creations_wax.png"
+                  alt="Création Wax Alunisson"
                   fill
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-                  20 € / personne
+                <div className="absolute inset-0 bg-black/10" />
+                <div className="absolute top-6 left-6 bg-wax-yellow text-foreground px-4 py-2 rounded-sm text-xs font-bold shadow-lg -rotate-2">
+                  Atelier Créatif — 20€
                 </div>
               </div>
-              <div className="p-6 md:p-8">
-                <h3 className="font-serif text-2xl mb-2">Atelier Alunisson</h3>
-                <p className="text-sm text-muted leading-relaxed mb-4">
-                  Tu réalises une création de A à Z : sac, trousse, doudou, gant…
-                  5 places max, réservation obligatoire.
-                  Tu repars avec ton objet fini !
+              <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
+                <h3 className="font-serif text-2xl mb-3">Atelier Alunisson</h3>
+                <p className="text-muted text-sm leading-relaxed mb-6 italic">
+                  "Tu repars avec ta création : sac wax, trousse, doudou..."
                 </p>
-                <Link href="/rejoindre" className="inline-block w-full text-center md:w-auto text-sm font-semibold bg-accent-soft text-accent px-6 py-3 rounded-full hover:bg-accent hover:text-white transition-all">
-                  Réserver ma place
+                <Link
+                  href="/rejoindre"
+                  className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md"
+                >
+                  Je réserve ma place
                 </Link>
               </div>
             </motion.div>
 
             {/* Atelier Initiation */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="group bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg hover:shadow-accent/5 transition-all duration-500"
+              className="group relative md:mt-24"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-2">
                 <Image
                   src="/enfant_groupe.jpg"
-                  alt="Atelier d'initiation couture"
+                  alt="Initiation couture"
                   fill
-                  className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4 bg-foreground text-background text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-                  Gratuit
+                <div className="absolute inset-0 bg-black/10" />
+                <div className="absolute top-6 right-6 bg-wax-teal text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg rotate-3">
+                  Initiation — Gratuit
                 </div>
               </div>
-              <div className="p-6 md:p-8">
-                <h3 className="font-serif text-2xl mb-2">Initiation</h3>
-                <p className="text-sm text-muted leading-relaxed mb-4">
-                  Pas de création ici — on apprend les bases :
-                  utiliser la machine, enfiler le fil, préparer une canette,
-                  coudre droit. Tranquille, sans pression.
+              <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
+                <h3 className="font-serif text-2xl mb-3">Apprendre les bases</h3>
+                <p className="text-muted text-sm leading-relaxed mb-6 italic">
+                  "Utiliser la machine, coudre droit, préparer une canette."
                 </p>
-                <Link href="/rejoindre" className="inline-block w-full text-center md:w-auto text-sm font-semibold bg-foreground/5 text-foreground px-6 py-3 rounded-full hover:bg-foreground hover:text-white transition-all">
-                  S'inscrire gratuitement
+                <Link
+                  href="/initiations"
+                  className="inline-block border-2 border-foreground text-foreground px-8 py-3 rounded-full font-bold hover:bg-foreground hover:text-white transition-all shadow-md"
+                >
+                  Découvrir le format
                 </Link>
               </div>
             </motion.div>
@@ -160,37 +195,50 @@ export default function Home() {
       </section>
 
       {/* ═══ OÙ ═══ */}
-      <section className="w-full py-16 md:py-20 px-6 md:px-10">
-        <div className="max-w-[1400px] mx-auto bg-accent-soft rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="font-serif text-2xl md:text-3xl mb-2">
-              On est à l'Info Lab Orléans
+      <section className="w-full py-16 md:py-24 px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto bg-accent-soft rounded-[2.5rem] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 overflow-hidden relative">
+          <div className="max-w-xl z-10">
+            <h3 className="font-serif text-3xl md:text-5xl mb-6 leading-tight">
+              On se retrouve à <br />
+              <span className="italic text-accent">l'Info Lab Orléans.</span>
             </h3>
-            <p className="text-sm text-muted max-w-md leading-relaxed mb-4">
-              Un espace partagé où la tech rencontre l'artisanat.<br />
-              <span className="text-foreground font-semibold">3 rue de la Cholerie, 45000 Orléans</span>
+            <p className="text-muted text-lg leading-relaxed mb-10">
+              Un espace partagé en plein centre-ville où la tech rencontre l'artisanat. 
+              On y partage les machines, les chutes de tissus et beaucoup de café.
+              <br /><br />
+              <span className="text-foreground font-bold border-b border-accent pb-1">3 rue de la Cholerie, 45000 Orléans</span>
             </p>
             <div className="flex flex-wrap gap-4 items-center">
               <a
                 href="https://www.instagram.com/alunisson.orleans/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-white text-accent font-semibold text-sm
-                           px-6 py-3 rounded-full border border-accent/20 hover:bg-accent hover:text-white
-                           transition-all duration-300 shadow-sm whitespace-nowrap"
+                className="bg-accent text-white font-bold text-sm px-10 py-5 rounded-full shadow-lg hover:scale-105 transition-transform"
               >
-                @alunisson.orleans
+                Suivre nos actus
               </a>
               <a 
                 href="https://www.google.com/maps/dir//3+rue+de+la+Cholerie+45000+Orléans" 
                 target="_blank" 
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-muted hover:text-accent transition-colors underline underline-offset-4"
+                className="text-xs font-bold uppercase tracking-widest text-muted hover:text-accent transition-colors"
               >
-                Voir sur Maps →
+                Itinéraire Maps →
               </a>
             </div>
           </div>
+
+          {/* Photo immersive du lieu/matériel */}
+          <div className="relative w-full lg:w-1/2 aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl offset-hand-1 border-[10px] border-white z-10">
+            <Image 
+              src="/tissus_table.jpg" 
+              alt="Table de couture Alunisson" 
+              fill 
+              className="object-cover" 
+            />
+          </div>
+          
+          {/* Décoration asymétrique */}
+          <div className="absolute top-[-10%] right-[-5%] w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
         </div>
       </section>
 

@@ -1,11 +1,12 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/ui/Navbar";
 import { MapPin, Mail, Clock } from "lucide-react";
 import { useEffect } from "react";
 
-// ⚠️ Remplace cette URL par ton vrai lien Calendly
-const CALENDLY_URL = "https://calendly.com/alunisson";
+// ⚠️ URL Calendly officielle
+const CALENDLY_URL = "https://calendly.com/alunisson-orleans";
 
 export default function RejoindrePage() {
 
@@ -24,20 +25,28 @@ export default function RejoindrePage() {
 
       <section className="pt-28 pb-20 md:pb-32 px-6 md:px-10">
         <div className="max-w-[1400px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-14"
-          >
-            <h1 className="font-serif text-4xl md:text-7xl mb-6">
-              Réserve ton atelier
-            </h1>
-            <p className="text-muted text-base max-w-lg leading-relaxed">
-              Choisis un créneau qui te convient directement dans le calendrier.
-              L'initiation est gratuite, aucun engagement.
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 lg:gap-16 items-end mb-14">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="font-serif text-4xl md:text-8xl mb-6 leading-none">
+                Réserver.
+              </h1>
+              <p className="text-muted text-base md:text-xl max-w-lg leading-relaxed">
+                Choisis un créneau qui te convient directement dans le calendrier.
+                L'initiation est gratuite, sans aucun engagement.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
+              animate={{ opacity: 1, scale: 1, rotate: 2 }}
+              className="relative h-48 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden lg:block"
+            >
+              <Image src="/machine_zoom.png" alt="Machine à coudre Alunisson" fill className="object-cover" />
+            </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12 lg:gap-16">
 

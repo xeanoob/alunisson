@@ -17,9 +17,14 @@ export default function AteliersPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-serif text-4xl md:text-7xl mb-6">
-              Nos ateliers
-            </h1>
+            <div className="relative inline-block">
+              <h1 className="font-serif text-4xl md:text-7xl mb-6">
+                Nos ateliers
+              </h1>
+              <span className="absolute -top-10 -right-16 font-hand text-wax-orange rotate-12 text-2xl hidden md:block">
+                C'est facile, promis !
+              </span>
+            </div>
             <p className="text-muted text-base max-w-lg leading-relaxed">
               Deux formats, un même lieu : l'Info Lab Orléans.
               Un pour créer, un pour apprendre. À toi de choisir !
@@ -29,19 +34,19 @@ export default function AteliersPage() {
       </section>
 
       {/* ═══ ATELIER ALUNISSON ═══ */}
-      <section className="px-6 md:px-10 pb-8">
+      <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-2xl overflow-hidden border border-border grid grid-cols-1 md:grid-cols-2"
+            className="bg-white rounded-3xl overflow-hidden stitched grid grid-cols-1 md:grid-cols-2 shadow-xl offset-hand-1"
           >
-            <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden md:order-2 m-4 rounded-xl shadow-lg border-2 border-white">
               <Image
-                src="/equipe_sac.jpg"
-                alt="Participants avec leurs sacs wax cousus main"
+                src="/creations_wax.png"
+                alt="Nos créations en Wax — Alunisson"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -49,21 +54,21 @@ export default function AteliersPage() {
             </div>
             <div className="flex flex-col justify-center p-8 md:p-12">
               <div className="flex items-center gap-2 mb-5">
-                <span className="text-xs bg-accent text-white px-3 py-1 rounded-full font-semibold">
+                <span className="text-xs bg-wax-yellow text-foreground px-4 py-1.5 rounded-sm font-bold -rotate-1 shadow-sm">
                   20 € / personne
                 </span>
-                <span className="text-xs text-accent font-semibold">
-                  Réservation obligatoire
+                <span className="text-xs text-wax-teal font-hand text-lg rotate-2 translate-x-2">
+                  Tout inclus !
                 </span>
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl mb-4">Atelier Alunisson</h2>
+              <h2 className="font-serif text-3xl md:text-5xl mb-4 italic">Atelier Alunisson</h2>
               <p className="text-muted text-sm leading-relaxed mb-6 max-w-md">
                 L'atelier créatif. En une séance, tu réalises un objet de A à Z :
                 sac, trousse, gant de cuisine, doudou, pochette…
                 On t'accompagne à chaque étape, et tu repars avec ta création !
               </p>
 
-              <div className="flex flex-col gap-3 mb-8 bg-accent-soft rounded-xl p-5">
+              <div className="flex flex-col gap-3 mb-8 bg-accent-soft rounded-2xl p-6 border border-accent/10 offset-hand-1">
                 {[
                   "5 personnes maximum",
                   "Tu repars avec ta création",
@@ -71,16 +76,16 @@ export default function AteliersPage() {
                   "Info Lab Orléans",
                 ].map((text) => (
                   <div key={text} className="flex items-center gap-3 text-sm">
-                    <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
-                    <span className="text-foreground">{text}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                    <span className="text-foreground font-medium">{text}</span>
                   </div>
                 ))}
               </div>
 
               <Link
                 href="/rejoindre"
-                className="w-full text-center md:self-start bg-accent text-white font-semibold text-sm
-                           px-8 py-4 rounded-full hover:bg-foreground transition-all duration-300 shadow-sm"
+                className="w-full text-center md:self-start bg-accent text-white font-bold text-sm
+                           px-8 py-4 rounded-full hover:bg-foreground transition-all duration-300 shadow-md offset-hand-3"
               >
                 Réserver une place
               </Link>
@@ -92,15 +97,18 @@ export default function AteliersPage() {
       {/* ═══ TRANSITION VERS INITIATIONS ═══ */}
       <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[1400px] mx-auto">
-          <div className="p-8 md:p-12 bg-foreground text-background rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-xl">
-              <h2 className="font-serif text-3xl mb-4">Tu débutes complètement ?</h2>
-              <p className="text-background/70 text-sm leading-relaxed">
+          <div className="p-8 md:p-12 bg-wax-teal text-white rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+            {/* Décoration bobine en fond */}
+            <div className="absolute top-0 right-0 opacity-10 font-serif text-[10rem] rotate-12 -translate-y-10 translate-x-10"></div>
+            
+            <div className="max-w-xl relative z-10">
+              <h2 className="font-serif text-3xl mb-4 italic">Tu débutes complètement ?</h2>
+              <p className="text-white/80 text-sm leading-relaxed">
                 On propose aussi des initiations gratuites pour apprendre les bases de la machine à coudre
                 sans pression. C'est l'étape idéale avant de se lancer dans un atelier créatif.
               </p>
             </div>
-            <Link href="/initiations" className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform whitespace-nowrap">
+            <Link href="/initiations" className="bg-wax-yellow text-foreground px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform whitespace-nowrap relative z-10 offset-hand-2">
               Découvrir les initiations gratuites
             </Link>
           </div>
