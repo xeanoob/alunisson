@@ -30,7 +30,7 @@ export default function Home() {
             className="max-w-[1400px] mx-auto"
           >
             <h1 className="font-serif text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[0.95] mb-5">
-              On coud ensemble.
+              La couture pour tous.
             </h1>
             <p className="text-white/80 text-base md:text-lg max-w-md leading-relaxed">
               Association de couture ouverte à tous, à Orléans.
@@ -269,26 +269,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ FOOTER ═══ */}
-      <footer className="w-full border-t border-border py-10 px-6 md:px-10 bg-white/50">
-        <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-            <span className="font-serif text-sm">Alunisson</span>
-            <span className="text-muted text-xs">·</span>
-            <span className="text-muted text-xs">Info Lab Orléans</span>
-            <span className="text-muted text-xs">·</span>
 
-          </div>
-          <div className="flex gap-6">
-            <a href="https://www.instagram.com/alunisson.orleans/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-accent transition-colors">
-              Instagram
-            </a>
-            <Link href="/rejoindre" className="text-xs text-muted hover:text-accent transition-colors">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

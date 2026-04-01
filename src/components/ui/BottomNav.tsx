@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const navLinks = [
   { href: "/", label: "Accueil", icon: Home },
   { href: "/ateliers", label: "Ateliers", icon: Scissors },
-  { href: "/philosophie", label: "L'Asso", icon: Heart },
+  { href: "/initiations", label: "Initiations", icon: Heart },
   { href: "/rejoindre", label: "Réserver", icon: Calendar },
 ];
 

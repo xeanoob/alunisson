@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { BottomNav } from "@/components/ui/BottomNav";
+import { Footer } from "@/components/ui/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,11 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body className="antialiased min-h-screen">
         <SmoothScroll>
           <div className="pb-16 md:pb-0">
             {children}
+            <Footer />
           </div>
         </SmoothScroll>
         <BottomNav />

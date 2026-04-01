@@ -89,63 +89,21 @@ export default function AteliersPage() {
         </div>
       </section>
 
-      {/* ═══ ATELIER INITIATION ═══ */}
+      {/* ═══ TRANSITION VERS INITIATIONS ═══ */}
       <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[1400px] mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-2xl overflow-hidden border border-border grid grid-cols-1 md:grid-cols-2"
-          >
-            <div className="flex flex-col justify-center p-8 md:p-12 md:order-1 order-2">
-              <div className="flex items-center gap-2 mb-5">
-                <span className="text-xs bg-foreground text-background px-3 py-1 rounded-full font-semibold">
-                  Gratuit
-                </span>
-                <span className="text-xs text-muted font-semibold">
-                  Ouvert à tous
-                </span>
-              </div>
-              <h2 className="font-serif text-3xl md:text-4xl mb-4">Initiation</h2>
-              <p className="text-muted text-sm leading-relaxed mb-6 max-w-md">
-                Pas de création ici — on apprend les fondamentaux.
-                Utiliser la machine, enfiler le fil, préparer une canette,
-                coudre droit. Les bases, tranquillement, sans pression.
+          <div className="p-8 md:p-12 bg-foreground text-background rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-xl">
+              <h2 className="font-serif text-3xl mb-4">Tu débutes complètement ?</h2>
+              <p className="text-background/70 text-sm leading-relaxed">
+                On propose aussi des initiations gratuites pour apprendre les bases de la machine à coudre
+                sans pression. C'est l'étape idéale avant de se lancer dans un atelier créatif.
               </p>
-
-              <div className="flex flex-col gap-3 mb-8 bg-accent-soft rounded-xl p-5">
-                {[
-                  "Entièrement gratuit",
-                  "Objectif : être autonome sur machine",
-                  "Débutant complet bienvenu",
-                  "Info Lab Orléans",
-                ].map((text) => (
-                  <div key={text} className="flex items-center gap-3 text-sm">
-                    <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
-                    <span className="text-foreground">{text}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href="/rejoindre"
-                className="w-full text-center md:self-start text-sm font-semibold bg-accent-soft text-accent px-8 py-4 rounded-full hover:bg-accent hover:text-white transition-all shadow-sm"
-              >
-                S'inscrire à une initiation
-              </Link>
             </div>
-            <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden md:order-2 order-1">
-              <Image
-                src="/enfant_groupe.jpg"
-                alt="Atelier d'initiation couture"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-          </motion.div>
+            <Link href="/initiations" className="bg-accent text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform whitespace-nowrap">
+              Découvrir les initiations gratuites
+            </Link>
+          </div>
         </div>
       </section>
 

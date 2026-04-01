@@ -5,10 +5,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { href: "/ateliers", label: "Ateliers" },
-  { href: "/philosophie", label: "Qui sommes-nous" },
-  { href: "/creations", label: "Créations" },
-  { href: "/rejoindre", label: "Rejoindre" },
+  { href: "/ateliers", label: "Nos ateliers" },
+  { href: "/initiations", label: "Nos initiations" },
+  { href: "/philosophie", label: "Nos actions" },
+  { href: "/aider", label: "Nous aider" },
 ];
 
 export function Navbar() {
