@@ -176,8 +176,8 @@ export default function AteliersPage() {
             <h3 className="font-serif text-xl mb-2">Lieu</h3>
             <p className="text-background/60 text-sm leading-relaxed">
               Info Lab Orléans<br />
-              <a href="https://www.instagram.com/infolaborleans/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                @infolaborleans
+              <a href="https://www.instagram.com/alunisson.orleans/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                @alunisson.orleans
               </a>
             </p>
           </div>

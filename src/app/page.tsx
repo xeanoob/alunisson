@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/ui/Navbar";
+import { InstagramFeed, INSTAGRAM_WIDGET_ID } from "@/components/ui/InstagramFeed";
 
 export default function Home() {
   return (
@@ -185,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CTA CHALEUREUX ═══ */}
-      <section className="w-full py-20 md:py-28 px-6">
+      <section className="w-full py-16 md:py-24 px-6 border-b border-border">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-5xl mb-6 leading-tight">
             Envie d'essayer ?
@@ -205,6 +206,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ═══ INSTAGRAM FEED ═══ */}
+      {INSTAGRAM_WIDGET_ID !== "PLACEHOLDER" && (
+        <section className="w-full py-16 md:py-20 px-6 md:px-10">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="flex flex-col sm:flex-row justify-between items-baseline mb-10 gap-4">
+              <div>
+                <h2 className="font-serif text-3xl md:text-4xl mb-2">Dans l'atelier</h2>
+                <p className="text-muted text-sm">Aperçu de ce qu'il se passe sur nos machines.</p>
+              </div>
+              <a 
+                href="https://www.instagram.com/alunisson.orleans/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm font-semibold text-accent hover:underline underline-offset-4"
+              >
+                Voir @alunisson.orleans →
+              </a>
+            </div>
+
+            <InstagramFeed />
+          </div>
+        </section>
+      )}
+
+      {/* ═══ NEWSLETTER ═══ */}
+      <section className="w-full py-20 px-6 md:px-10 bg-accent-soft rounded-t-[2rem] mt-4">
+        <div className="max-w-xl mx-auto text-center">
+          <h2 className="font-serif text-3xl mb-4 text-foreground">
+            On reste en contact ?
+          </h2>
+          <p className="text-muted text-sm md:text-base mb-8 leading-relaxed">
+            On organise parfois des gros ateliers le week-end. Laisse ton email pour être prévenu en premier (les places partent très vite).
+          </p>
+          <form className="flex flex-col sm:flex-row gap-3 justify-center" onSubmit={(e) => e.preventDefault()}>
+            <input 
+              type="email" 
+              placeholder="ton.email@exemple.com" 
+              required
+              className="px-6 py-4 rounded-full border border-white bg-white focus:outline-none focus:border-accent w-full text-sm shadow-sm"
+            />
+            <button 
+              type="submit"
+              className="bg-accent text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide hover:bg-foreground transition-colors shadow-sm"
+            >
+              M'inscrire
+            </button>
+          </form>
+        </div>
+      </section>
+
       {/* ═══ FOOTER ═══ */}
       <footer className="w-full border-t border-border py-10 px-6 md:px-10 bg-white/50">
         <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
@@ -216,7 +267,7 @@ export default function Home() {
 
           </div>
           <div className="flex gap-6">
-            <a href="https://www.instagram.com/infolaborleans/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-accent transition-colors">
+            <a href="https://www.instagram.com/alunisson.orleans/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-accent transition-colors">
               Instagram
             </a>
             <Link href="/rejoindre" className="text-xs text-muted hover:text-accent transition-colors">

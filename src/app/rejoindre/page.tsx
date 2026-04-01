@@ -63,9 +63,7 @@ export default function RejoindrePage() {
                 </div>
                 <p className="text-sm leading-relaxed">
                   Info Lab Orléans<br />
-                  <a href="https://www.instagram.com/infolaborleans/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-                    @infolaborleans
-                  </a>
+                  <a href="https://www.instagram.com/alunisson.orleans/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">@alunisson.orleans</a>
                 </p>
               </div>
 
