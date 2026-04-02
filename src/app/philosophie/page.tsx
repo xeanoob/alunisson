@@ -12,20 +12,11 @@ export default function PhilosophiePage() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16 items-center">
           
           {/* Portrait flottant */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -2 }}
-            animate={{ opacity: 1, scale: 1, rotate: -2 }}
-            transition={{ duration: 1 }}
-            className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white hidden lg:block offset-hand-1"
-          >
+          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-[12px] border-white hidden lg:block offset-hand-1">
             <Image src="/enfant_groupe.jpg" alt="L'enthousiasme du faire soi-même" fill className="object-cover" />
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h1 className="font-serif text-5xl md:text-8xl mb-10 leading-[1.05]">
               On a monté Alunisson <span className="italic text-accent">ensemble.</span>
             </h1>
@@ -39,10 +30,10 @@ export default function PhilosophiePage() {
               <p>
                 Alors on a trouvé un local (merci l'Info Lab !), on a acheté des
                 machines Brother, on a ramené nos stocks de tissu wax, de coton,
-                de jersey — et on a ouvert les portes. 
+                de jersey — et on a ouvert les portes.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -100,8 +91,8 @@ export default function PhilosophiePage() {
           >
             <Image src="/equipe_sac.jpg" alt="L'équipe Alunisson" fill className="object-cover" sizes="100vw" />
           </motion.div>
-          <div className="absolute -bottom-6 right-10 bg-accent text-white px-6 py-2 rounded-sm font-serif italic text-sm shadow-lg offset-hand-2 z-20">
-            L'équipe lors d'un atelier Sac Wax
+          <div className="absolute -bottom-6 right-10 bg-eco-green text-white px-6 py-2 rounded-sm font-serif italic text-sm shadow-lg offset-hand-2 z-20">
+            L'équipe lors d'un atelier Upcycling
           </div>
         </div>
       </section>

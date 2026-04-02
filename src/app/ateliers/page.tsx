@@ -21,7 +21,7 @@ export default function AteliersPage() {
               <h1 className="font-serif text-4xl md:text-7xl mb-6">
                 Nos ateliers
               </h1>
-              <span className="absolute -top-10 -right-16 font-hand text-wax-orange rotate-12 text-2xl hidden md:block">
+              <span className="absolute top-2 -right-10 md:-right-40 font-hand text-eco-clay rotate-[8deg] text-2xl hidden md:block">
                 C'est facile, promis !
               </span>
             </div>
@@ -54,10 +54,10 @@ export default function AteliersPage() {
             </div>
             <div className="flex flex-col justify-center p-8 md:p-12">
               <div className="flex items-center gap-2 mb-5">
-                <span className="text-xs bg-wax-yellow text-foreground px-4 py-1.5 rounded-sm font-bold -rotate-1 shadow-sm">
+                <span className="text-xs bg-eco-sand text-foreground px-4 py-1.5 rounded-sm font-bold -rotate-1 shadow-sm">
                   20 € / personne
                 </span>
-                <span className="text-xs text-wax-teal font-hand text-lg rotate-2 translate-x-2">
+                <span className="text-xs text-eco-green font-hand text-lg rotate-2 translate-x-2">
                   Tout inclus !
                 </span>
               </div>
@@ -97,7 +97,7 @@ export default function AteliersPage() {
       {/* ═══ TRANSITION VERS INITIATIONS ═══ */}
       <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[1400px] mx-auto">
-          <div className="p-8 md:p-12 bg-wax-teal text-white rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+          <div className="p-8 md:p-12 bg-eco-green text-white rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
             {/* Décoration bobine en fond */}
             <div className="absolute top-0 right-0 opacity-10 font-serif text-[10rem] rotate-12 -translate-y-10 translate-x-10"></div>
             
@@ -108,7 +108,7 @@ export default function AteliersPage() {
                 sans pression. C'est l'étape idéale avant de se lancer dans un atelier créatif.
               </p>
             </div>
-            <Link href="/initiations" className="bg-wax-yellow text-foreground px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform whitespace-nowrap relative z-10 offset-hand-2">
+            <Link href="/initiations" className="bg-eco-sand text-foreground px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform whitespace-nowrap relative z-10 offset-hand-2">
               Découvrir les initiations gratuites
             </Link>
           </div>

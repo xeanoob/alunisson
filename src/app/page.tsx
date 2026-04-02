@@ -34,17 +34,14 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="flex flex-col items-center">
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/50 mb-6 border-b border-white/10 pb-2">
-                Association Couture Orléans
+              <span className="text-2xl md:text-4xl font-serif text-white mb-2 tracking-wide drop-shadow-md">
+                Alunisson
               </span>
               <div className="relative inline-block text-center">
-                <h1 className="font-serif text-white text-6xl sm:text-8xl md:text-[10rem] leading-none mb-8 drop-shadow-2xl">
+                <h1 className="font-serif text-white text-5xl sm:text-7xl md:text-[7rem] leading-[1.1] mb-8 drop-shadow-2xl">
                   La couture <br />
-                  <span className="italic text-wax-yellow">pour tous.</span>
+                  <span className="italic text-eco-sand">pour tous.</span>
                 </h1>
-                <span className="absolute -top-6 -right-12 font-hand text-wax-yellow rotate-12 text-xl sm:text-2xl hidden sm:block">
-                  Le fil de la solidarité
-                </span>
               </div>
             </div>
             
@@ -78,10 +75,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <p className="font-serif text-2xl sm:text-3xl md:text-[2.1rem] leading-[1.4] text-foreground">
-              Alunisson est née d'une idée simple : la couture, ça s'apprend
-              mieux <em className="text-accent not-italic font-semibold">à plusieurs</em>.
-              On partage les machines, les tissus, les galères et les réussites.
-              Débutant ou confirmé, t'as ta place ici.
+              Alunisson c'est l'association qui allie <em className="text-accent not-italic font-semibold">créativité et environnement</em>.
+              On donne une seconde vie aux tissus tout en développant la motricité et l'expression artistique de chacun,
+              dans un but d'inclusion sociale.
             </p>
           </motion.div>
         </div>
@@ -106,7 +102,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-            {/* Atelier Créatif */}
+            {/* Atelier Créatif & Circulaire */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -116,19 +112,19 @@ export default function Home() {
               <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
                 <Image
                   src="/creations_wax.png"
-                  alt="Création Wax Alunisson"
+                  alt="Création Éco-responsable Alunisson"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10" />
-                <div className="absolute top-6 left-6 bg-wax-yellow text-foreground px-4 py-2 rounded-sm text-xs font-bold shadow-lg -rotate-2">
-                  Atelier Créatif — 20€
+                <div className="absolute top-6 left-6 bg-accent text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg -rotate-2">
+                  Atelier Upcycling — 20€
                 </div>
               </div>
               <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
-                <h3 className="font-serif text-2xl mb-3">Atelier Alunisson</h3>
+                <h3 className="font-serif text-2xl mb-3">Nos Ateliers</h3>
                 <p className="text-muted text-sm leading-relaxed mb-6 italic">
-                  "Tu repars avec ta création : sac wax, trousse, doudou..."
+                  "Réalise ton tote bag, tablier ou trousse à partir de matières recyclées, pour l'environnement."
                 </p>
                 <Link
                   href="/rejoindre"
@@ -154,14 +150,14 @@ export default function Home() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10" />
-                <div className="absolute top-6 right-6 bg-wax-teal text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg rotate-3">
+                <div className="absolute top-6 right-6 bg-eco-green text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg rotate-3">
                   Initiation — Gratuit
                 </div>
               </div>
               <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
-                <h3 className="font-serif text-2xl mb-3">Apprendre les bases</h3>
+                <h3 className="font-serif text-2xl mb-3">Découverte Sociale</h3>
                 <p className="text-muted text-sm leading-relaxed mb-6 italic">
-                  "Utiliser la machine, coudre droit, préparer une canette."
+                  "Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance."
                 </p>
                 <Link
                   href="/initiations"
@@ -203,10 +199,11 @@ export default function Home() {
               <span className="italic text-accent">l'Info Lab Orléans.</span>
             </h3>
             <p className="text-muted text-lg leading-relaxed mb-10">
-              Un espace partagé en plein centre-ville où la tech rencontre l'artisanat. 
-              On y partage les machines, les chutes de tissus et beaucoup de café.
+              Un espace partagé en plein centre-ville pour apprendre et faire de la couture ensemble. 
+              On y partage les machines, et on revalorise nos chutes de tissus !
               <br /><br />
-              <span className="text-foreground font-bold border-b border-accent pb-1">3 rue de la Cholerie, 45000 Orléans</span>
+              <span className="text-foreground font-bold border-b border-accent pb-1 block mb-2">Partenariats Sociaux :</span>
+              <span className="text-sm">Interventions avec l'ODAS, les centres aérés et le CIDFF pour créer du lien.</span>
             </p>
             <div className="flex flex-wrap gap-4 items-center">
               <a

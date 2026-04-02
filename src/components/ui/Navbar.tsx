@@ -9,6 +9,7 @@ const links = [
   { href: "/initiations", label: "Nos initiations" },
   { href: "/philosophie", label: "Nos actions" },
   { href: "/aider", label: "Nous aider" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -27,7 +28,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-[1000] bg-white/40 backdrop-blur-xl border-b border-black/5">
+      <nav className="fixed top-0 left-0 w-full z-[1000] bg-white/40 backdrop-blur-xl border-b border-black/5 pt-[env(safe-area-inset-top)]">
         <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 h-16">
           <Link 
             href="/" 
@@ -68,27 +69,27 @@ export function Navbar() {
             
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden flex flex-col items-center justify-center w-10 h-10 gap-1.5 p-2 bg-foreground text-background rounded-full shadow-lg"
+              className="md:hidden flex flex-col items-center justify-center w-12 h-12 gap-[5px] p-2 bg-foreground text-background rounded-full shadow-lg"
               aria-label="Menu"
             >
               <motion.span 
-                animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 4 : 0 }}
-                className="w-5 h-[1.5px] bg-current rounded-full"
+                animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 7 : 0 }}
+                className="w-5 h-[2px] bg-current rounded-full origin-center"
               />
               <motion.span 
                 animate={{ opacity: isOpen ? 0 : 1 }}
-                className="w-5 h-[1.5px] bg-current rounded-full"
+                className="w-5 h-[2px] bg-current rounded-full"
               />
               <motion.span 
-                animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -4 : 0 }}
-                className="w-5 h-[1.5px] bg-current rounded-full"
+                animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -7 : 0 }}
+                className="w-5 h-[2px] bg-current rounded-full origin-center"
               />
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - ESPRIT ATELIER COLORÉ */}
+      {/* Mobile Menu Overlay - ESPRIT ÉCOLOGIE */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -96,14 +97,14 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[999] md:hidden bg-[#FFF9E5] flex flex-col pt-24 px-8 overflow-hidden"
+            className="fixed inset-0 z-[999] md:hidden bg-background flex flex-col pt-[calc(6rem+env(safe-area-inset-top))] px-8 overflow-hidden"
           >
             {/* Texture de papier / tissu en fond */}
-            <div className="absolute inset-0 opacity-[0.08] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/felt.png')]" />
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]" />
             
-            {/* Éléments de décoration "couture" */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 -left-10 w-60 h-60 bg-wax-teal/10 rounded-full blur-3xl" />
+            {/* Éléments de décoration "nature" */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent-soft rounded-full blur-3xl" />
+            <div className="absolute bottom-20 -left-10 w-60 h-60 bg-eco-green/10 rounded-full blur-3xl" />
 
             <div className="flex flex-col gap-10 w-full max-w-sm mx-auto relative z-10">
               <div className="space-y-8">
@@ -121,7 +122,7 @@ export function Navbar() {
                     <Link
                       href={l.href}
                       onClick={() => setIsOpen(false)}
-                      className={`font-serif text-5xl block transition-all hover:translate-x-2 active:scale-95 ${pathname === l.href ? "text-accent italic underline decoration-wax-yellow underline-offset-8" : "text-foreground"}`}
+                      className={`font-serif text-5xl block transition-all hover:translate-x-2 active:scale-95 ${pathname === l.href ? "text-accent italic underline decoration-eco-sand underline-offset-8" : "text-foreground"}`}
                     >
                       {l.label}
                     </Link>
@@ -142,13 +143,13 @@ export function Navbar() {
                 <Link
                   href="/rejoindre"
                   onClick={() => setIsOpen(false)}
-                  className="group relative flex items-center justify-center w-full bg-accent text-white py-6 rounded-2xl font-bold uppercase tracking-widest shadow-xl transition-all hover:shadow-2xl active:scale-95 overflow-hidden offset-hand-1"
+                  className="group relative flex items-center justify-center w-full bg-eco-green text-white py-6 rounded-2xl font-bold uppercase tracking-widest shadow-xl transition-all hover:shadow-2xl active:scale-95 overflow-hidden offset-hand-1"
                 >
-                  <span className="relative z-10">Réserver un atelier</span>
-                  <div className="absolute inset-0 bg-wax-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="relative z-10">Nous rejoindre</span>
+                  <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
                 <span className="absolute -bottom-8 right-2 font-hand text-accent rotate-2 text-base">
-                  On t'attend au labo
+                  La couture pour tous
                 </span>
               </motion.div>
             </div>
@@ -162,7 +163,7 @@ export function Navbar() {
             >
               <div className="flex gap-2">
                 {[1,2,3,4,5].map(i => (
-                  <div key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-wax-yellow' : 'bg-wax-teal'}`} />
+                  <div key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-eco-clay' : 'bg-eco-green'}`} />
                 ))}
               </div>
               <p className="font-hand text-lg opacity-40">Alunisson · Créé avec amour à Orléans</p>

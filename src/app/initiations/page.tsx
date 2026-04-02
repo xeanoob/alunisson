@@ -18,11 +18,11 @@ export default function InitiationsPage() {
             transition={{ duration: 0.6 }}
           >
             <div className="relative inline-block">
-              <span className="text-xs font-bold text-wax-teal uppercase tracking-widest mb-4 block">Gratuit / Débutant</span>
+              <span className="text-xs font-bold text-eco-green uppercase tracking-widest mb-4 block">Gratuit / Débutant</span>
               <h1 className="font-serif text-4xl md:text-7xl mb-6">
                 Nos initiations
               </h1>
-              <span className="absolute -top-10 -right-16 font-hand text-wax-orange rotate-12 text-2xl hidden md:block">
+              <span className="absolute top-2 -right-10 md:-right-36 font-hand text-eco-clay rotate-[8deg] text-2xl hidden md:block z-10">
                 C'est facile, promis !
               </span>
             </div>
@@ -40,10 +40,10 @@ export default function InitiationsPage() {
           <div className="bg-white rounded-3xl overflow-hidden stitched grid grid-cols-1 md:grid-cols-2 shadow-xl offset-hand-1">
             <div className="flex flex-col justify-center p-8 md:p-12 md:order-1 order-2">
               <div className="flex items-center gap-2 mb-5">
-                <span className="text-xs bg-wax-teal text-white px-4 py-1.5 rounded-sm font-bold rotate-1 shadow-sm">
+                <span className="text-xs bg-eco-green text-white px-4 py-1.5 rounded-sm font-bold rotate-1 shadow-sm">
                   100% Gratuit
                 </span>
-                <span className="text-xs text-wax-orange font-hand text-lg -rotate-2 translate-x-2">
+                <span className="text-xs text-eco-clay font-hand text-lg -rotate-2 translate-x-2">
                   Zéro pression.
                 </span>
               </div>
@@ -71,7 +71,7 @@ export default function InitiationsPage() {
 
               <Link
                 href="/rejoindre"
-                className="w-full text-center md:self-start bg-wax-yellow text-foreground font-bold text-sm
+                className="w-full text-center md:self-start bg-eco-sand text-foreground font-bold text-sm
                            px-10 py-5 rounded-full hover:bg-foreground hover:text-white transition-all duration-300 shadow-xl offset-hand-1"
               >
                 Réserver mon initiation

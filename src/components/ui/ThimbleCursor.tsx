@@ -27,8 +27,11 @@ export function ThimbleCursor() {
     const move = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
+    };
 
+    const over = (e: MouseEvent) => {
       const el = e.target as HTMLElement;
+      if (!el) return;
       const isClickable =
         el.closest("a") || el.closest("button") || el.closest("[draggable]") ||
         el.closest("[data-drag]") || el.getAttribute("role") === "button";
@@ -38,11 +41,13 @@ export function ThimbleCursor() {
     const down = () => setPressing(true);
     const up = () => setPressing(false);
 
-    window.addEventListener("mousemove", move);
-    window.addEventListener("mousedown", down);
-    window.addEventListener("mouseup", up);
+    window.addEventListener("mousemove", move, { passive: true });
+    window.addEventListener("mouseover", over, { passive: true });
+    window.addEventListener("mousedown", down, { passive: true });
+    window.addEventListener("mouseup", up, { passive: true });
     return () => {
       window.removeEventListener("mousemove", move);
+      window.removeEventListener("mouseover", over);
       window.removeEventListener("mousedown", down);
       window.removeEventListener("mouseup", up);
     };
