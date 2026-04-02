@@ -7,7 +7,7 @@ hero:
   buttonPrimary: Réserver un atelier
   buttonSecondary: Découvrir l'association
 welcome:
-  text: 'Alunisson c''est l''association qui allie créativité et environnement. On donne une seconde vie aux tissus tout en développant la motricité et l''expression artistique de chacun, dans un but d''inclusion .'
+  text: 'Alunisson c''est l''association qui allie créativité et environnement. On donne une seconde vie aux tissus tout en développant la motricité et l''expression artistique de chacun, dans un but d''inclusion sociale.'
 sections:
   - title: Nos ateliers phares
     items:
