@@ -2,7 +2,10 @@ import { defineConfig } from "tinacms";
 
 // Configuration for Alunisson CMS
 export default defineConfig({
-  branch: process.env.VERCEL_GIT_COMMIT_REF || "main",
+  branch: 
+    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || 
+    process.env.VERCEL_GIT_COMMIT_REF || 
+    "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "", // empty string for local development
   token: process.env.TINA_TOKEN || "", // empty string for local development
 
