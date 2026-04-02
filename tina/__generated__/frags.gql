@@ -1,0 +1,47 @@
+fragment PageParts on Page {
+  __typename
+  title
+  hero {
+    __typename
+    title
+    italicTitle
+    description
+    buttonPrimary
+    buttonSecondary
+    image
+  }
+  welcome {
+    __typename
+    text
+  }
+  sections {
+    __typename
+    ... on PageSectionsWorkshopBlock {
+      title
+      subtitle
+      priceTag
+      priceSub
+      description
+      features
+      image
+      buttonText
+      buttonLink
+    }
+    ... on PageSectionsGridSection {
+      title
+      items {
+        __typename
+        title
+        text
+        label
+      }
+    }
+    ... on PageSectionsRichTextSection {
+      body
+    }
+    ... on PageSectionsPolaroidBlock {
+      image
+      caption
+    }
+  }
+}
