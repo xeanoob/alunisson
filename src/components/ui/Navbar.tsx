@@ -97,7 +97,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[999] md:hidden bg-background flex flex-col pt-[calc(6rem+env(safe-area-inset-top))] px-8 overflow-hidden"
+            className="fixed inset-0 z-[999] md:hidden bg-background flex flex-col pt-[calc(6rem+env(safe-area-inset-top))] px-8 overflow-y-auto pb-4"
           >
             {/* Texture de papier / tissu en fond */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]" />
