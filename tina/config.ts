@@ -3,8 +3,8 @@ import { defineConfig } from "tinacms";
 // Configuration for Alunisson CMS
 export default defineConfig({
   branch: "main",
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "", // empty string for local development
-  token: process.env.TINA_TOKEN || "", // empty string for local development
+  clientId: "",
+  token: "",
 
   build: {
     outputFolder: "admin",
@@ -24,6 +24,16 @@ export default defineConfig({
         path: "content/pages",
         format: "md",
         fields: [
+          {
+            type: "object",
+            name: "seo",
+            label: "SEO & Partage Réseaux Sociaux",
+            fields: [
+              { type: "string", name: "title", label: "Titre de la page (SEO)", description: "Si vide, le titre principal sera utilisé." },
+              { type: "string", name: "description", label: "Description de la page (SEO)", ui: { component: "textarea" } },
+              { type: "image", name: "image", label: "Image de partage (OG Image)", description: "1200x630px recommandé." },
+            ],
+          },
           {
             type: "string",
             name: "title",

@@ -87,6 +87,12 @@ type Collection {
 
 union DocumentNode = Page | Folder
 
+type PageSeo {
+  title: String
+  description: String
+  image: String
+}
+
 type PageHero {
   title: String
   italicTitle: String
@@ -135,6 +141,7 @@ type PageSectionsPolaroidBlock {
 union PageSections = PageSectionsWorkshopBlock | PageSectionsGridSection | PageSectionsRichTextSection | PageSectionsPolaroidBlock
 
 type Page implements Node & Document {
+  seo: PageSeo
   title: String!
   hero: PageHero
   welcome: PageWelcome
@@ -156,6 +163,12 @@ input ImageFilter {
   eq: String
   exists: Boolean
   in: [String]
+}
+
+input PageSeoFilter {
+  title: StringFilter
+  description: StringFilter
+  image: ImageFilter
 }
 
 input PageHeroFilter {
@@ -217,6 +230,7 @@ input PageSectionsFilter {
 }
 
 input PageFilter {
+  seo: PageSeoFilter
   title: StringFilter
   hero: PageHeroFilter
   welcome: PageWelcomeFilter
@@ -251,6 +265,12 @@ input DocumentUpdateMutation {
 
 input DocumentMutation {
   page: PageMutation
+}
+
+input PageSeoMutation {
+  title: String
+  description: String
+  image: String
 }
 
 input PageHeroMutation {
@@ -306,6 +326,7 @@ input PageSectionsMutation {
 }
 
 input PageMutation {
+  seo: PageSeoMutation
   title: String
   hero: PageHeroMutation
   welcome: PageWelcomeMutation

@@ -2,10 +2,8 @@
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
   branch: "main",
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
-  // empty string for local development
-  token: process.env.TINA_TOKEN || "",
-  // empty string for local development
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "d515c47b-7442-42e3-9bc2-b087f369bf5b",
+  token: process.env.TINA_TOKEN || "96331a6f81b7f02ad13f51a94b8a38e655e7fa79",
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -24,6 +22,16 @@ var config_default = defineConfig({
         path: "content/pages",
         format: "md",
         fields: [
+          {
+            type: "object",
+            name: "seo",
+            label: "SEO & Partage R\xE9seaux Sociaux",
+            fields: [
+              { type: "string", name: "title", label: "Titre de la page (SEO)", description: "Si vide, le titre principal sera utilis\xE9." },
+              { type: "string", name: "description", label: "Description de la page (SEO)", ui: { component: "textarea" } },
+              { type: "image", name: "image", label: "Image de partage (OG Image)", description: "1200x630px recommand\xE9." }
+            ]
+          },
           {
             type: "string",
             name: "title",

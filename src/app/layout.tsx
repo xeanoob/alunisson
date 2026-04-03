@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     description: "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers couture, entraide et créativité.",
     images: [
       {
-        url: "/equipe_sac.jpg",
+        url: "/og-main.png",
         width: 1200,
         height: 630,
-        alt: "L'équipe Alunisson Orléans",
+        alt: "Artisanat et couture collaborative chez Alunisson Orléans",
       },
     ],
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alunisson — Couture Collaborative",
     description: "La couture pour tous à Orléans.",
-    images: ["/equipe_sac.jpg"],
+    images: ["/og-main.png"],
   },
   robots: {
     index: true,

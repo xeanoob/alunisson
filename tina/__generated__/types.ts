@@ -165,6 +165,13 @@ export type CollectionDocumentsArgs = {
 
 export type DocumentNode = Page | Folder;
 
+export type PageSeo = {
+  __typename?: 'PageSeo';
+  title?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+};
+
 export type PageHero = {
   __typename?: 'PageHero';
   title?: Maybe<Scalars['String']['output']>;
@@ -221,6 +228,7 @@ export type PageSections = PageSectionsWorkshopBlock | PageSectionsGridSection |
 
 export type Page = Node & Document & {
   __typename?: 'Page';
+  seo?: Maybe<PageSeo>;
   title: Scalars['String']['output'];
   hero?: Maybe<PageHero>;
   welcome?: Maybe<PageWelcome>;
@@ -242,6 +250,12 @@ export type ImageFilter = {
   eq?: InputMaybe<Scalars['String']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type PageSeoFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
 };
 
 export type PageHeroFilter = {
@@ -303,6 +317,7 @@ export type PageSectionsFilter = {
 };
 
 export type PageFilter = {
+  seo?: InputMaybe<PageSeoFilter>;
   title?: InputMaybe<StringFilter>;
   hero?: InputMaybe<PageHeroFilter>;
   welcome?: InputMaybe<PageWelcomeFilter>;
@@ -387,6 +402,12 @@ export type DocumentMutation = {
   page?: InputMaybe<PageMutation>;
 };
 
+export type PageSeoMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type PageHeroMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   italicTitle?: InputMaybe<Scalars['String']['input']>;
@@ -440,20 +461,21 @@ export type PageSectionsMutation = {
 };
 
 export type PageMutation = {
+  seo?: InputMaybe<PageSeoMutation>;
   title?: InputMaybe<Scalars['String']['input']>;
   hero?: InputMaybe<PageHeroMutation>;
   welcome?: InputMaybe<PageWelcomeMutation>;
   sections?: InputMaybe<Array<InputMaybe<PageSectionsMutation>>>;
 };
 
-export type PagePartsFragment = { __typename: 'Page', title: string, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null };
+export type PagePartsFragment = { __typename: 'Page', title: string, seo?: { __typename: 'PageSeo', title?: string | null, description?: string | null, image?: string | null } | null, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } };
+export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, seo?: { __typename: 'PageSeo', title?: string | null, description?: string | null, image?: string | null } | null, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } };
 
 export type PageConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -465,11 +487,17 @@ export type PageConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } | null } | null> | null } };
+export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, seo?: { __typename: 'PageSeo', title?: string | null, description?: string | null, image?: string | null } | null, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } | null } | null> | null } };
 
 export const PagePartsFragmentDoc = gql`
     fragment PageParts on Page {
   __typename
+  seo {
+    __typename
+    title
+    description
+    image
+  }
   title
   hero {
     __typename
