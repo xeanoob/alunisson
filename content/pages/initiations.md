@@ -25,8 +25,10 @@ sections:
     _template: workshopBlock
   - title: Pourquoi l'initiation ?
     items:
-      - title: Sortir de la Fast-Fashion
-        text: 'Savoir faire un ourlet ou recoudre un bouton, c''est le début de la résistance contre le gaspillage.'
+      - title: Avancer en étant accompagner
+        text: |-
+          Si vous avez de nombreuses questions sur la couture, ce créneau est fait pour vous !
+          Nous vous accompagnerons au mieux dans vos débuts.
       - title: Prendre confiance
         text: 'La machine à coudre fait un peu peur au début, mais une fois domptée, tout devient possible.'
     _template: gridSection
