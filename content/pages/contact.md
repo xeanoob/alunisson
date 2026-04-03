@@ -11,7 +11,7 @@ sections:
       - title: Email
         text: alunisson.orleans@gmail.com
         label: EMAIL
-      - title: Adresse de l'atelier
+      - title: L'ATELIER
         text: |-
           Info Lab, 3 rue de la Cholerie 
           45000 Orléans
