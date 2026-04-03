@@ -11,8 +11,8 @@ welcome:
 sections:
   - title: Nos ateliers phares
     items:
-      - title: Atelier Upcycling — 20€
-        text: 'Réalise ton tote bag, tablier ou trousse à partir de matières recyclées, pour l''environnement.'
+      - title: Atelier - 20€
+        text: 'Viens réaliser ta première création ! '
         label: Atelier Alunisson
       - title: Initiation — Gratuit
         text: Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance.
