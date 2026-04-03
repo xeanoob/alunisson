@@ -3,8 +3,8 @@ import { defineConfig } from "tinacms";
 // Configuration for Alunisson CMS
 export default defineConfig({
   branch: "main",
-  clientId: "",
-  token: "",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "d515c47b-7442-42e3-9bc2-b087f369bf5b",
+  token: process.env.TINA_TOKEN || "96331a6f81b7f02ad13f51a94b8a38e655e7fa79",
 
   build: {
     outputFolder: "admin",
