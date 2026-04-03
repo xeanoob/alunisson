@@ -30,7 +30,7 @@ sections:
           Si vous avez de nombreuses questions sur la couture, ce créneau est fait pour vous !
           Nous vous accompagnerons au mieux dans vos débuts.
       - title: Prendre confiance
-        text: 'La machine à coudre fait un peu peur au début, mais une fois domptée, tout devient possible.'
+        text: 'La machine à coudre peut sembler intimidante au début, mais une fois maîtrisée, elle ouvre le champ des possibles. Soyez fiers de ce que vous créez !'
     _template: gridSection
 ---
 
