@@ -13,7 +13,9 @@ sections:
           Offrez-leur une seconde vie entre les mains de nos adhérents.
         label: MATÉRIEL
       - title: Dépôt pratique
-        text: 'Dépôt possible à l''Info Lab (3 rue de la Cholerie, Orléans) lors de nos permanences.'
+        text: |-
+          Vous pouvez les déposer directement à l’atelier (3 rue de la Cholerie, 45000 Orléans) ou, si besoin, nous pouvons nous déplacer.
+          N’hésitez pas à nous contacter via Instagram.
         label: LIEU
     _template: gridSection
   - title: Chaque bobine compte.
