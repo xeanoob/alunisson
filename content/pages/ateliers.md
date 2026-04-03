@@ -26,10 +26,13 @@ sections:
     buttonText: Réserver une place
     buttonLink: /rejoindre
     _template: workshopBlock
-  - title: Tu débutes complètement ?
-    subtitle: Apprendre les bases en douceur.
+  - title: Nos cours "Initiation"
+    subtitle: Apprendre à manipuler sa machine à coudre
     priceTag: Gratuit
-    description: On propose aussi des initiations gratuites pour apprendre les bases de la machine à coudre sans pression. C'est l'étape idéale avant de se lancer dans un atelier créatif.
+    description: |-
+      Nous proposons, une fois par mois, des séances d’initiation destinées à vous apprendre à utiliser votre machine à coudre dans de bonnes conditions. Alors n'hésite pas, et viens apprendre les bases !
+
+      Le planning de ces initiations est disponible sur notre page Instagram.
     buttonText: Découvrir les initiations gratuites
     buttonLink: /initiations
     _template: workshopBlock
