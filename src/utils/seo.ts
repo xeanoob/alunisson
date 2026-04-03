@@ -1,6 +1,26 @@
 import { Metadata } from "next";
 
-export function resolveMetadata(data: any, fallbackTitle: string, fallbackDesc: string): Metadata {
+interface TinaSeoData {
+  title?: string | null;
+  description?: string | null;
+  image?: string | null;
+}
+
+interface TinaPageData {
+  page?: {
+    seo?: TinaSeoData | null;
+    [key: string]: unknown;
+  } | null;
+}
+
+/**
+ * Resolves metadata from Tina data. Handles missing seo fields gracefully.
+ */
+export function resolveMetadata(
+  data: TinaPageData | null | undefined,
+  fallbackTitle: string,
+  fallbackDesc: string
+): Metadata {
   const seo = data?.page?.seo;
   const image = seo?.image || "/og-main.png";
 

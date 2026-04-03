@@ -1,11 +1,5 @@
 fragment PageParts on Page {
   __typename
-  seo {
-    __typename
-    title
-    description
-    image
-  }
   title
   hero {
     __typename

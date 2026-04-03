@@ -25,16 +25,6 @@ export default defineConfig({
         format: "md",
         fields: [
           {
-            type: "object",
-            name: "seo",
-            label: "SEO & Partage Réseaux Sociaux",
-            fields: [
-              { type: "string", name: "title", label: "Titre de la page (SEO)", description: "Si vide, le titre principal sera utilisé." },
-              { type: "string", name: "description", label: "Description de la page (SEO)", ui: { component: "textarea" } },
-              { type: "image", name: "image", label: "Image de partage (OG Image)", description: "1200x630px recommandé." },
-            ],
-          },
-          {
             type: "string",
             name: "title",
             label: "Titre interne de la page",

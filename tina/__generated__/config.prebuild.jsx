@@ -23,16 +23,6 @@ var config_default = defineConfig({
         format: "md",
         fields: [
           {
-            type: "object",
-            name: "seo",
-            label: "SEO & Partage R\xE9seaux Sociaux",
-            fields: [
-              { type: "string", name: "title", label: "Titre de la page (SEO)", description: "Si vide, le titre principal sera utilis\xE9." },
-              { type: "string", name: "description", label: "Description de la page (SEO)", ui: { component: "textarea" } },
-              { type: "image", name: "image", label: "Image de partage (OG Image)", description: "1200x630px recommand\xE9." }
-            ]
-          },
-          {
             type: "string",
             name: "title",
             label: "Titre interne de la page",
