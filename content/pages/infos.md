@@ -12,7 +12,7 @@ sections:
           Aucun matériel n’est demandé : ALUNISSON met à votre disposition tout le nécessaire au bon déroulement de l’atelier.
           Toutefois, si vous préférez utiliser votre propre machine, vous pouvez bien entendu l’apporter.
       - title: Quels tissus utilisez-vous ?
-        text: 'On adore le Wax pour ses couleurs, mais on travaille tout : coton, jersey, lin. On a souvent du stock récupéré grâce à des dons.'
+        text: Nous utilisons toute sorte de tissu ! vous pourrez faire votre selection parmis un grand nombre de tissu mis à votre disposition. A vous de faire votre choix !
       - title: À quel âge peut-on commencer ?
         text: 'Dès 8 ans, accompagné d''un adulte si besoin. Pour les initiations, c''est idéal pour découvrir la coordination œil-main.'
       - title: Est-ce que je peux venir avec mon projet perso ?
