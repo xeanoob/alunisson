@@ -14,6 +14,18 @@ fragment PageParts on Page {
     __typename
     text
   }
+  bandeau {
+    __typename
+    image
+    title
+    subtitle
+  }
+  location {
+    __typename
+    image
+    title
+    text
+  }
   sections {
     __typename
     ... on PageSectionsWorkshopBlock {
@@ -34,6 +46,7 @@ fragment PageParts on Page {
         title
         text
         label
+        image
       }
     }
     ... on PageSectionsRichTextSection {

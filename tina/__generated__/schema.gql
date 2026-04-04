@@ -100,6 +100,18 @@ type PageWelcome {
   text: String
 }
 
+type PageBandeau {
+  image: String
+  title: String
+  subtitle: String
+}
+
+type PageLocation {
+  image: String
+  title: String
+  text: String
+}
+
 type PageSectionsWorkshopBlock {
   title: String
   subtitle: String
@@ -116,6 +128,7 @@ type PageSectionsGridSectionItems {
   title: String
   text: String
   label: String
+  image: String
 }
 
 type PageSectionsGridSection {
@@ -138,6 +151,8 @@ type Page implements Node & Document {
   title: String!
   hero: PageHero
   welcome: PageWelcome
+  bandeau: PageBandeau
+  location: PageLocation
   sections: [PageSections]
   id: ID!
   _sys: SystemInfo!
@@ -171,6 +186,18 @@ input PageWelcomeFilter {
   text: StringFilter
 }
 
+input PageBandeauFilter {
+  image: ImageFilter
+  title: StringFilter
+  subtitle: StringFilter
+}
+
+input PageLocationFilter {
+  image: ImageFilter
+  title: StringFilter
+  text: StringFilter
+}
+
 input PageSectionsWorkshopBlockFilter {
   title: StringFilter
   subtitle: StringFilter
@@ -187,6 +214,7 @@ input PageSectionsGridSectionItemsFilter {
   title: StringFilter
   text: StringFilter
   label: StringFilter
+  image: ImageFilter
 }
 
 input PageSectionsGridSectionFilter {
@@ -220,6 +248,8 @@ input PageFilter {
   title: StringFilter
   hero: PageHeroFilter
   welcome: PageWelcomeFilter
+  bandeau: PageBandeauFilter
+  location: PageLocationFilter
   sections: PageSectionsFilter
 }
 
@@ -266,6 +296,18 @@ input PageWelcomeMutation {
   text: String
 }
 
+input PageBandeauMutation {
+  image: String
+  title: String
+  subtitle: String
+}
+
+input PageLocationMutation {
+  image: String
+  title: String
+  text: String
+}
+
 input PageSectionsWorkshopBlockMutation {
   title: String
   subtitle: String
@@ -282,6 +324,7 @@ input PageSectionsGridSectionItemsMutation {
   title: String
   text: String
   label: String
+  image: String
 }
 
 input PageSectionsGridSectionMutation {
@@ -309,6 +352,8 @@ input PageMutation {
   title: String
   hero: PageHeroMutation
   welcome: PageWelcomeMutation
+  bandeau: PageBandeauMutation
+  location: PageLocationMutation
   sections: [PageSectionsMutation]
 }
 

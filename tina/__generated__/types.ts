@@ -180,6 +180,20 @@ export type PageWelcome = {
   text?: Maybe<Scalars['String']['output']>;
 };
 
+export type PageBandeau = {
+  __typename?: 'PageBandeau';
+  image?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+};
+
+export type PageLocation = {
+  __typename?: 'PageLocation';
+  image?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<Scalars['String']['output']>;
+};
+
 export type PageSectionsWorkshopBlock = {
   __typename?: 'PageSectionsWorkshopBlock';
   title?: Maybe<Scalars['String']['output']>;
@@ -198,6 +212,7 @@ export type PageSectionsGridSectionItems = {
   title?: Maybe<Scalars['String']['output']>;
   text?: Maybe<Scalars['String']['output']>;
   label?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
 };
 
 export type PageSectionsGridSection = {
@@ -224,6 +239,8 @@ export type Page = Node & Document & {
   title: Scalars['String']['output'];
   hero?: Maybe<PageHero>;
   welcome?: Maybe<PageWelcome>;
+  bandeau?: Maybe<PageBandeau>;
+  location?: Maybe<PageLocation>;
   sections?: Maybe<Array<Maybe<PageSections>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
@@ -257,6 +274,18 @@ export type PageWelcomeFilter = {
   text?: InputMaybe<StringFilter>;
 };
 
+export type PageBandeauFilter = {
+  image?: InputMaybe<ImageFilter>;
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+};
+
+export type PageLocationFilter = {
+  image?: InputMaybe<ImageFilter>;
+  title?: InputMaybe<StringFilter>;
+  text?: InputMaybe<StringFilter>;
+};
+
 export type PageSectionsWorkshopBlockFilter = {
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
@@ -273,6 +302,7 @@ export type PageSectionsGridSectionItemsFilter = {
   title?: InputMaybe<StringFilter>;
   text?: InputMaybe<StringFilter>;
   label?: InputMaybe<StringFilter>;
+  image?: InputMaybe<ImageFilter>;
 };
 
 export type PageSectionsGridSectionFilter = {
@@ -306,6 +336,8 @@ export type PageFilter = {
   title?: InputMaybe<StringFilter>;
   hero?: InputMaybe<PageHeroFilter>;
   welcome?: InputMaybe<PageWelcomeFilter>;
+  bandeau?: InputMaybe<PageBandeauFilter>;
+  location?: InputMaybe<PageLocationFilter>;
   sections?: InputMaybe<PageSectionsFilter>;
 };
 
@@ -400,6 +432,18 @@ export type PageWelcomeMutation = {
   text?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type PageBandeauMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PageLocationMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  text?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type PageSectionsWorkshopBlockMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
@@ -416,6 +460,7 @@ export type PageSectionsGridSectionItemsMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   text?: InputMaybe<Scalars['String']['input']>;
   label?: InputMaybe<Scalars['String']['input']>;
+  image?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type PageSectionsGridSectionMutation = {
@@ -443,17 +488,19 @@ export type PageMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   hero?: InputMaybe<PageHeroMutation>;
   welcome?: InputMaybe<PageWelcomeMutation>;
+  bandeau?: InputMaybe<PageBandeauMutation>;
+  location?: InputMaybe<PageLocationMutation>;
   sections?: InputMaybe<Array<InputMaybe<PageSectionsMutation>>>;
 };
 
-export type PagePartsFragment = { __typename: 'Page', title: string, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null };
+export type PagePartsFragment = { __typename: 'Page', title: string, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } };
+export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } };
 
 export type PageConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -465,7 +512,7 @@ export type PageConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } | null } | null> | null } };
+export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } | null } | null> | null } };
 
 export const PagePartsFragmentDoc = gql`
     fragment PageParts on Page {
@@ -482,6 +529,18 @@ export const PagePartsFragmentDoc = gql`
   }
   welcome {
     __typename
+    text
+  }
+  bandeau {
+    __typename
+    image
+    title
+    subtitle
+  }
+  location {
+    __typename
+    image
+    title
     text
   }
   sections {
@@ -504,6 +563,7 @@ export const PagePartsFragmentDoc = gql`
         title
         text
         label
+        image
       }
     }
     ... on PageSectionsRichTextSection {
@@ -629,7 +689,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/2.2/content/d515c47b-7442-42e3-9bc2-b087f369bf5b/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

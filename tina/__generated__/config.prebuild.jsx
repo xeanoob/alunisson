@@ -52,6 +52,26 @@ var config_default = defineConfig({
           },
           {
             type: "object",
+            name: "bandeau",
+            label: "Bandeau Photo (milieu de page)",
+            fields: [
+              { type: "image", name: "image", label: "Image de fond" },
+              { type: "string", name: "title", label: "Texte principal" },
+              { type: "string", name: "subtitle", label: "Sous-texte" }
+            ]
+          },
+          {
+            type: "object",
+            name: "location",
+            label: "Section Lieu / O\xF9 nous trouver",
+            fields: [
+              { type: "image", name: "image", label: "Photo du lieu" },
+              { type: "string", name: "title", label: "Titre", ui: { component: "textarea" } },
+              { type: "string", name: "text", label: "Description", ui: { component: "textarea" } }
+            ]
+          },
+          {
+            type: "object",
             list: true,
             name: "sections",
             label: "Sections de la page",
@@ -87,7 +107,8 @@ var config_default = defineConfig({
                     fields: [
                       { type: "string", name: "title", label: "Titre" },
                       { type: "string", name: "text", label: "Texte", ui: { component: "textarea" } },
-                      { type: "string", name: "label", label: "Petit label (ex: PROJET 01)" }
+                      { type: "string", name: "label", label: "Petit label (ex: PROJET 01)" },
+                      { type: "image", name: "image", label: "Image (optionnel)" }
                     ]
                   }
                 ]
