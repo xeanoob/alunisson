@@ -23,7 +23,7 @@ sections:
       - title: Plateau en tissu
         text: /tissus_table.jpg
         label: 'aspect-[4/5]'
-      - title: Concentration et créativité
+      - title: Création en fonction des saisons !
         text: /enfant_groupe.jpg
         label: aspect-square
     _template: gridSection
