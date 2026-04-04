@@ -47,7 +47,8 @@ export function Navbar() {
     <>
       {/* Barre fixe — fond opaque pour ne pas voir le contenu dans le Dynamic Island */}
       <nav
-        className="fixed top-0 left-0 right-0 z-[1000] border-b border-black/5 bg-white"
+        className="fixed top-0 left-0 right-0 z-[1000] border-b border-black/5 bg-background
+                   before:content-[''] before:absolute before:top-[-100px] before:left-0 before:right-0 before:h-[100px] before:bg-inherit"
         style={{
           paddingTop: "env(safe-area-inset-top, 0px)",
         }}
