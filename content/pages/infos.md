@@ -26,7 +26,7 @@ sections:
       - title: Horaires
         text: 'Nous proposons des ateliers tous les dimanches de 14 h à 16 h, mais également le samedi matin et l’après-midi, selon le planning que vous trouverez sur notre site.'
         label: HORAIRES
-      - title: Partenariats
+      - title: Partenariat
         text: 'Nous collaborons avec l’Info Lab Orléans, ce qui nous permet de disposer d’un grand espace pour vous accueillir !'
         label: PARTENARIAT
     _template: gridSection
