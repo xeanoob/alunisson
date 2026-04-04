@@ -17,7 +17,7 @@ sections:
       - title: Marque-page
         text: /enfant_groupe.jpg
         label: 'aspect-[3/4]'
-      - title: Fierté post-atelier
+      - title: Sac à cordon
         text: /equipe_sac.jpg
         label: 'aspect-[3/4]'
       - title: Table de coupe multicolore
