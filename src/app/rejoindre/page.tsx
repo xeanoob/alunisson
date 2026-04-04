@@ -3,6 +3,9 @@ import { RejoindreClient } from "@/components/cms/RejoindreClient";
 import { Metadata } from "next";
 import { resolveMetadata } from "@/utils/seo";
 
+export const revalidate = 60;
+
+
 export async function generateMetadata(): Promise<Metadata> {
   const result = await client.queries.page({ relativePath: "rejoindre.md" });
   return resolveMetadata(

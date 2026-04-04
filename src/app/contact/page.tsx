@@ -3,6 +3,9 @@ import { ContactClient } from "@/components/cms/ContactClient";
 import { Metadata } from "next";
 import { resolveMetadata } from "@/utils/seo";
 
+export const revalidate = 60;
+
+
 export async function generateMetadata(): Promise<Metadata> {
   const result = await client.queries.page({ relativePath: "contact.md" });
   return resolveMetadata(
