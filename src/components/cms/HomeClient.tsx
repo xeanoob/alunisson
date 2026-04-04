@@ -97,31 +97,22 @@ export function HomeClient(props: {
         </div>
       </section>
 
-      {/* ═══ LES DEUX ATELIERS ═══ */}
+      {/* ═══ NOS ATELIERS ═══ */}
       <section className="w-full px-6 md:px-10 pb-12">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="max-w-2xl">
-              <span className="text-accent font-serif italic text-lg mb-2 block">Dès 8 ans, pour tous.</span>
-              <h2 className="font-serif text-4xl md:text-6xl">
-                Viens coudre avec nous.
-              </h2>
-            </div>
-            <Link 
-              href="/ateliers" 
-              className="text-sm font-bold uppercase tracking-widest border-b-2 border-accent pb-1 hover:text-accent transition-colors"
-            >
-              Voir tous les formats →
-            </Link>
+          <div className="text-center mb-16 max-w-2xl mx-auto">
+            <span className="text-accent font-serif italic text-lg mb-2 block">Dès 8 ans, pour tous.</span>
+            <h2 className="font-serif text-4xl md:text-6xl">
+              Viens coudre avec nous.
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+          <div className="flex justify-center">
             {(() => {
               const gridSection = content.sections?.find((s) => s?.__typename === "PageSectionsGridSection");
               type GridType = { items?: Array<{ title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null };
               const grid = gridSection as unknown as GridType;
               const w1 = grid?.items?.[0] || {};
-              const w2 = grid?.items?.[1] || {};
 
               return (
                 <>
@@ -149,12 +140,20 @@ export function HomeClient(props: {
                       <p className="text-muted text-sm leading-relaxed mb-6 italic">
                         "{w1.text || "Réalise ton tote bag, tablier ou trousse à partir de matières recyclées, pour l'environnement."}"
                       </p>
-                      <Link
-                        href="/rejoindre"
-                        className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md"
-                      >
-                        Je réserve ma place
-                      </Link>
+                      <div className="flex flex-col sm:flex-row items-center gap-4">
+                        <Link
+                          href="/rejoindre"
+                          className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md"
+                        >
+                          Je réserve ma place
+                        </Link>
+                        <Link 
+                          href="/ateliers" 
+                          className="text-xs font-bold uppercase tracking-widest text-muted hover:text-accent transition-colors py-2"
+                        >
+                          En savoir plus →
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 </>
