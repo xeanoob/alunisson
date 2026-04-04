@@ -3,7 +3,7 @@ title: Informations
 hero:
   title: En savoir plus.
   description: Tout ce que tu as toujours voulu savoir sur Alunisson et notre fonctionnement à l'Info Lab Orléans.
-  image: /uploads/creations_wax.png
+  image: /creations_wax.png
 sections:
   - title: Questions fréquentes
     items:

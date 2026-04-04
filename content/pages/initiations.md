@@ -19,7 +19,7 @@ sections:
       - 'Durée : environ 1h30'
       - Accessible dès 8 ans
       - 'Lieu : Info Lab Orléans'
-    image: /uploads/machine_zoom.png
+    image: /machine_zoom.png
     buttonText: Réserver mon initiation
     buttonLink: /rejoindre
     _template: workshopBlock

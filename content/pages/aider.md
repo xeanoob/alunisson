@@ -3,7 +3,7 @@ title: Nous Aider
 hero:
   title: Nous aider.
   description: Alunisson vit grâce à l'énergie de ses membres et à la générosité de tous. Voici comment tu peux faire grandir l'association.
-  image: /uploads/tissus_table.jpg
+  image: /tissus_table.jpg
 sections:
   - title: Comment nous aider ?
     items:
