@@ -14,7 +14,7 @@ sections:
       - title: Range-labello
         text: /tissus_table.jpg
         label: aspect-square
-      - title: Les p'tites mains en action
+      - title: Marque-page
         text: /enfant_groupe.jpg
         label: 'aspect-[3/4]'
       - title: Fierté post-atelier
