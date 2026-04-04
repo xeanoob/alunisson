@@ -12,12 +12,8 @@ sections:
           Vous avez des chutes de tissus, des bobines de fil ou une machine à coudre que vous n’utilisez plus ? Nous les récupérons avec plaisir !
           Offrez-leur une seconde vie entre les mains de nos adhérents.
         label: MATÉRIEL
-      - title: Dépôt pratique
-        text: |-
-          Vous pouvez les déposer directement à l’atelier (3 rue de la Cholerie, 45000 Orléans) ou, si besoin, nous pouvons nous déplacer.
-          N’hésitez pas à nous contacter par mail.
-        label: LIEU
       - title: Laisse un commentaire !
+        text: "Aidez-nous à nous faire connaître en laissant un commentaire sur notre page Google ou sous nos publications Instagram \U0001F642"
     _template: gridSection
   - title: Chaque bobine compte.
     description: Nous contacter pour un don. On est là chaque semaine à l'Info Lab.
