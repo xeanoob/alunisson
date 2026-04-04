@@ -114,71 +114,81 @@ export function HomeClient(props: {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-            {/* Atelier Créatif & Circulaire */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="group relative"
-            >
-              <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
-                <Image
-                  src="/creations_wax.png"
-                  alt="Création Éco-responsable Alunisson"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/10" />
-                <div className="absolute top-6 left-6 bg-accent text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg -rotate-2">
-                  Atelier Upcycling — 20€
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
-                <h3 className="font-serif text-2xl mb-3">Nos Ateliers</h3>
-                <p className="text-muted text-sm leading-relaxed mb-6 italic">
-                  "Réalise ton tote bag, tablier ou trousse à partir de matières recyclées, pour l'environnement."
-                </p>
-                <Link
-                  href="/rejoindre"
-                  className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md"
-                >
-                  Je réserve ma place
-                </Link>
-              </div>
-            </motion.div>
+            {(() => {
+              const gridSection = content.sections?.find((s) => s?.__typename === "PageSectionsGridSection" || (s as any)?._template === "gridSection") as any;
+              const w1 = gridSection?.items?.[0] || {};
+              const w2 = gridSection?.items?.[1] || {};
 
-            {/* Atelier Initiation */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="group relative md:mt-24"
-            >
-              <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-2">
-                <Image
-                  src="/enfant_groupe.jpg"
-                  alt="Initiation couture"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/10" />
-                <div className="absolute top-6 right-6 bg-eco-green text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg rotate-3">
-                  Initiation — Gratuit
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
-                <h3 className="font-serif text-2xl mb-3">Découverte Sociale</h3>
-                <p className="text-muted text-sm leading-relaxed mb-6 italic">
-                  "Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance."
-                </p>
-                <Link
-                  href="/initiations"
-                  className="inline-block border-2 border-foreground text-foreground px-8 py-3 rounded-full font-bold hover:bg-foreground hover:text-white transition-all shadow-md"
-                >
-                  Découvrir le format
-                </Link>
-              </div>
-            </motion.div>
+              return (
+                <>
+                  {/* Atelier Créatif & Circulaire */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
+                      <Image
+                        src="/creations_wax.png"
+                        alt="Création Éco-responsable Alunisson"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/10" />
+                      <div className="absolute top-6 left-6 bg-accent text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg -rotate-2">
+                        {w1.title || "Atelier Upcycling — 20€"}
+                      </div>
+                    </div>
+                    <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
+                      <h3 className="font-serif text-2xl mb-3">{w1.label || "Nos Ateliers"}</h3>
+                      <p className="text-muted text-sm leading-relaxed mb-6 italic">
+                        "{w1.text || "Réalise ton tote bag, tablier ou trousse à partir de matières recyclées, pour l'environnement."}"
+                      </p>
+                      <Link
+                        href="/rejoindre"
+                        className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md"
+                      >
+                        Je réserve ma place
+                      </Link>
+                    </div>
+                  </motion.div>
+
+                  {/* Atelier Initiation */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="group relative md:mt-24"
+                  >
+                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-2">
+                      <Image
+                        src="/enfant_groupe.jpg"
+                        alt="Initiation couture"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/10" />
+                      <div className="absolute top-6 right-6 bg-eco-green text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg rotate-3">
+                        {w2.title || "Initiation — Gratuit"}
+                      </div>
+                    </div>
+                    <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
+                      <h3 className="font-serif text-2xl mb-3">{w2.label || "Découverte Sociale"}</h3>
+                      <p className="text-muted text-sm leading-relaxed mb-6 italic">
+                        "{w2.text || "Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance."}"
+                      </p>
+                      <Link
+                        href="/initiations"
+                        className="inline-block border-2 border-foreground text-foreground px-8 py-3 rounded-full font-bold hover:bg-foreground hover:text-white transition-all shadow-md"
+                      >
+                        Découvrir le format
+                      </Link>
+                    </div>
+                  </motion.div>
+                </>
+              );
+            })()}
           </div>
         </div>
       </section>
