@@ -3,8 +3,7 @@ title: Créations
 hero:
   title: Créations
   description: |
-    Tout ce qui sort de l'atelier — fait main par nos membres.
-    Sacs, trousses, doudous, vêtements… et beaucoup de fierté.
+    Plongez dans l’univers de nos ateliers à travers des créations réalisées par nos membres, pour nos membres !
 sections:
   - title: Notre Portfolio
     items:
