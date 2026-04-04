@@ -13,9 +13,8 @@ sections:
           @alunisson.orleans
         label: LIEU
       - title: Ateliers
-        text: |-
-          Atelier Alunisson - 20 € (5 places) 
-          Atelier Initiation - Gratuit
+        text: |
+          Atelier ALUNISSON - 20 € (5 places) 
         label: INFOS
       - title: Contact direct
         text: |-
