@@ -14,6 +14,8 @@ sections:
         label: MATÉRIEL
       - title: Laisse un commentaire !
         text: "Aidez-nous à nous faire connaître en laissant un commentaire sur notre page Google ou sous nos publications Instagram \U0001F642"
+      - title: Parle de nous !
+        text: 'Parlez de nous à tout le monde : à votre maman, votre papa, votre petit frère, votre grande sœur… même à votre chien ou votre chat ! Vraiment, à tout le monde..'
     _template: gridSection
   - title: Chaque bobine compte.
     description: Nous contacter pour un don. On est là chaque semaine à l'Info Lab.
