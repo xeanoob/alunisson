@@ -20,7 +20,7 @@ sections:
       - title: Sac à cordon
         text: /equipe_sac.jpg
         label: 'aspect-[3/4]'
-      - title: Table de coupe multicolore
+      - title: Plateau en tissu
         text: /tissus_table.jpg
         label: 'aspect-[4/5]'
       - title: Concentration et créativité
