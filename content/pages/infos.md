@@ -13,6 +13,8 @@ sections:
           Toutefois, si vous préférez utiliser votre propre machine, vous pouvez bien entendu l’apporter.
       - title: À quel âge peut-on commencer ?
         text: 'Vous pouvez participer aux ateliers dès 8 ans, accompagné d''un adulte si besoin. '
+      - title: 'Dois-je avoir un certain niveau pour participer ? '
+        text: 'Nous acceptons tous les niveaux, de la personne expérimentée à celle qui n’a jamais touché une machine de sa vie. Nous souhaitons passer un moment convivial et rempli de souvenirs.'
     _template: gridSection
   - title: Infos pratiques
     items:
