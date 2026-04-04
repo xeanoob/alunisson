@@ -3,7 +3,7 @@ title: Nous Aider
 hero:
   title: Nous aider.
   description: Alunisson vit grâce à l'énergie de ses membres et à la générosité de tous. Voici comment tu peux faire grandir l'association.
-  image: /tissus_table.jpg
+  image: /uploads/tissus_table.jpg
 sections:
   - title: Comment nous aider ?
     items:
@@ -17,6 +17,7 @@ sections:
           Vous pouvez les déposer directement à l’atelier (3 rue de la Cholerie, 45000 Orléans) ou, si besoin, nous pouvons nous déplacer.
           N’hésitez pas à nous contacter par mail.
         label: LIEU
+      - title: Laisse un commentaire !
     _template: gridSection
   - title: Chaque bobine compte.
     description: Nous contacter pour un don. On est là chaque semaine à l'Info Lab.
