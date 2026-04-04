@@ -115,9 +115,11 @@ export function HomeClient(props: {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
             {(() => {
-              const gridSection = content.sections?.find((s) => s?.__typename === "PageSectionsGridSection" || (s as any)?._template === "gridSection") as any;
-              const w1 = gridSection?.items?.[0] || {};
-              const w2 = gridSection?.items?.[1] || {};
+              const gridSection = content.sections?.find((s) => s?.__typename === "PageSectionsGridSection");
+              type GridType = { items?: Array<{ title?: string | null, text?: string | null, label?: string | null } | null> | null };
+              const grid = gridSection as unknown as GridType;
+              const w1 = grid?.items?.[0] || {};
+              const w2 = grid?.items?.[1] || {};
 
               return (
                 <>
