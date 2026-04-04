@@ -26,7 +26,6 @@ sections:
       ### Tarifs
 
       Atelier Alunisson : **20 €**
-      Initiation : **Gratuit**
     _template: richTextSection
 ---
 
