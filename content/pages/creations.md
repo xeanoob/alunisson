@@ -11,7 +11,7 @@ sections:
       - title: Tote bag
         text: /equipe_sac.jpg
         label: 'aspect-[4/5]'
-      - title: Sélection de tissus colorés
+      - title: Range-labello
         text: /tissus_table.jpg
         label: aspect-square
       - title: Les p'tites mains en action
