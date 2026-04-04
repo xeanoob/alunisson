@@ -21,16 +21,41 @@ export function Navbar() {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      // Fix iOS Safari: empêche le bounce scroll
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${window.scrollY}px`;
     } else {
-      document.body.style.overflow = "unset";
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
     }
-    return () => { document.body.style.overflow = "unset"; };
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+    };
   }, [isOpen]);
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-[1000] bg-white/40 backdrop-blur-xl border-b border-black/5 pt-[env(safe-area-inset-top)]">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 h-16">
+      {/* Barre fixe — le background couvre TOUTE la zone y compris derrière le notch */}
+      <nav
+        className="fixed top-0 left-0 right-0 z-[1000] border-b border-black/5"
+        style={{
+          paddingTop: "env(safe-area-inset-top, 0px)",
+          background: "rgba(255,255,255,0.4)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+        }}
+      >
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 h-14">
           <Link 
             href="/" 
             onClick={() => setIsOpen(false)}
@@ -40,12 +65,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="relative text-[12px] font-bold uppercase tracking-[0.15em] text-foreground/60 transition-colors hover:text-foreground py-2"
+                className="relative text-[11px] font-bold uppercase tracking-[0.12em] text-foreground/60 transition-colors hover:text-foreground py-2"
               >
                 {l.label}
                 {pathname === l.href && (
@@ -70,7 +95,7 @@ export function Navbar() {
             
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden flex flex-col items-center justify-center w-12 h-12 gap-[5px] p-2 bg-foreground text-background rounded-full shadow-lg"
+              className="md:hidden flex flex-col items-center justify-center w-11 h-11 gap-[5px] p-2 bg-foreground text-background rounded-full shadow-lg"
               aria-label="Menu"
             >
               <motion.span 
@@ -90,7 +115,7 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - ESPRIT ÉCOLOGIE */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -98,7 +123,12 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[999] md:hidden bg-background flex flex-col pt-[calc(6rem+env(safe-area-inset-top))] px-8 overflow-y-auto pb-4"
+            className="fixed top-0 left-0 right-0 z-[999] md:hidden bg-background flex flex-col overflow-y-auto"
+            style={{
+              paddingTop: "calc(env(safe-area-inset-top, 0px) + 4.5rem)",
+              paddingBottom: "env(safe-area-inset-bottom, 1.5rem)",
+              height: "100dvh",
+            }}
           >
             {/* Texture de papier / tissu en fond */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]" />
@@ -107,10 +137,10 @@ export function Navbar() {
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent-soft rounded-full blur-3xl" />
             <div className="absolute bottom-20 -left-10 w-60 h-60 bg-eco-green/10 rounded-full blur-3xl" />
 
-            <div className="flex flex-col gap-10 w-full max-w-sm mx-auto relative z-10">
-              <div className="space-y-8">
+            <div className="flex flex-col gap-6 w-full max-w-sm mx-auto relative z-10 px-8 flex-1">
+              <div className="space-y-5">
                 <div className="relative">
-                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold opacity-30 block mb-2">Explorer</span>
+                  <span className="text-[10px] uppercase tracking-[0.4em] font-bold opacity-30 block mb-1">Explorer</span>
                 </div>
 
                 {links.map((l, i) => (
@@ -123,7 +153,7 @@ export function Navbar() {
                     <Link
                       href={l.href}
                       onClick={() => setIsOpen(false)}
-                      className={`font-serif text-5xl block transition-all hover:translate-x-2 active:scale-95 ${pathname === l.href ? "text-accent italic underline decoration-eco-sand underline-offset-8" : "text-foreground"}`}
+                      className={`font-serif text-3xl block transition-all hover:translate-x-2 active:scale-95 ${pathname === l.href ? "text-accent italic underline decoration-eco-sand underline-offset-8" : "text-foreground"}`}
                     >
                       {l.label}
                     </Link>
@@ -131,7 +161,7 @@ export function Navbar() {
                 ))}
               </div>
               
-              <div className="py-4">
+              <div className="py-2">
                 <div className="h-px bg-foreground/10 w-full" />
               </div>
               
@@ -144,30 +174,27 @@ export function Navbar() {
                 <Link
                   href="/rejoindre"
                   onClick={() => setIsOpen(false)}
-                  className="group relative flex items-center justify-center w-full bg-eco-green text-white py-6 rounded-2xl font-bold uppercase tracking-widest shadow-xl transition-all hover:shadow-2xl active:scale-95 overflow-hidden offset-hand-1"
+                  className="group relative flex items-center justify-center w-full bg-eco-green text-white py-5 rounded-2xl font-bold uppercase tracking-widest shadow-xl transition-all hover:shadow-2xl active:scale-95 overflow-hidden"
                 >
                   <span className="relative z-10">Nous rejoindre</span>
                   <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
-                <span className="absolute -bottom-8 right-2 font-hand text-accent rotate-2 text-base">
-                  La couture pour tous
-                </span>
               </motion.div>
             </div>
             
-            {/* Pied du menu mobile artisanal */}
+            {/* Pied du menu mobile */}
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="mt-auto pb-10 flex flex-col items-center gap-3 relative z-10"
+              className="py-6 flex flex-col items-center gap-3 relative z-10"
             >
               <div className="flex gap-2">
                 {[1,2,3,4,5].map(i => (
                   <div key={i} className={`w-2 h-2 rounded-full ${i % 2 === 0 ? 'bg-eco-clay' : 'bg-eco-green'}`} />
                 ))}
               </div>
-              <p className="font-hand text-lg opacity-40">Alunisson · Créé avec amour à Orléans</p>
+              <p className="font-hand text-base opacity-40">Alunisson · Orléans</p>
             </motion.div>
           </motion.div>
         )}
