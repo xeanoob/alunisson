@@ -4,9 +4,8 @@ hero:
   title: On a monté Alunisson
   italicTitle: ensemble.
   description: |-
-    Alunisson, c'est une association loi 1901 créée à Orléans par un groupe de passionnés de couture et de créativité textile. Le constat était simple : les machines à coudre coûtent cher, les ateliers individuels aussi, et coudre seul·e chez soi c'est pas terrible. 
-
-    Alors on a trouvé un local (merci l'Info Lab !), on a acheté des machines Brother, on a ramené nos stocks de tissu wax, de coton, de jersey — et on a ouvert les portes.
+    L’association “ALUNISSON” a été créée en juin 2023 par FONTAINE Quentin et BENAOUDA Théo. Cette association propose des cours de couture à tous types de publics, en passant par les enfants aux adultes en situation de handicap.  
+    Notre objectif est développé la couture, mais également la créativité, la motricité fine et le développement artistique au sein de nos interventions.  
   image: /uploads/enfant_groupe.jpg
 sections:
   - title: Ce en quoi on croit
