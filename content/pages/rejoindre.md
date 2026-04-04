@@ -18,7 +18,9 @@ sections:
            Atelier Initiation — Gratuit
         label: INFOS
       - title: Contact direct
-        text: contact@alunisson.fr
+        text: |-
+          alunisson.orleans@gmail.com
+          0666750812
         label: EMAIL
     _template: gridSection
   - body: |
