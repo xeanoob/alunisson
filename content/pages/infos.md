@@ -12,7 +12,7 @@ sections:
           Aucun matériel n’est demandé, nous mettons à disposition tout le nécessaire au bon déroulement de l’atelier.
           Toutefois, si vous préférez utiliser votre propre machine, vous pouvez bien entendu l’apporter.
       - title: À quel âge peut-on commencer ?
-        text: 'Dès 8 ans, accompagné d''un adulte si besoin. Pour les initiations, c''est idéal pour découvrir la coordination œil-main.'
+        text: 'Vous pouvez participer aux ateliers dès 8 ans, accompagné d''un adulte si besoin. '
     _template: gridSection
   - title: Infos pratiques
     items:
