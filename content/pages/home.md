@@ -16,8 +16,8 @@ sections:
         text: 'Viens réaliser ta première création, avec un prix abordable !'
         label: Atelier Alunisson
       - title: Initiation - Gratuit
-        text: Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance.
-        label: Découverte Sociale
+        text: 'Ici, pas de création, mais nous t’apprenons à maîtriser ta machine, à l’enfiler, etc.'
+        label: ''
     _template: gridSection
 ---
 
