@@ -9,8 +9,8 @@ sections:
     items:
       - title: Lieu
         text: |-
-          Info Lab Orléans 
-          @alunisson.orleans
+          Infolab 
+          3 rue de la Cholerie 45000 Orléans
         label: LIEU
       - title: Ateliers
         text: |
