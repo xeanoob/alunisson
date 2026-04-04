@@ -2,7 +2,7 @@
 title: Réserver
 hero:
   title: Réserver.
-  description: 'Choisis un créneau qui te convient directement dans le calendrier. L''initiation est gratuite, sans aucun engagement.'
+  description: 'Choisis un créneau qui te convient directement dans le calendrier. '
   image: /uploads/machine_zoom.png
 sections:
   - title: Contact & Lieu
