@@ -24,7 +24,7 @@ sections:
         text: 'Info Lab Orléans (Info Jeunes), 3 rue de la Cholerie. En plein centre ville historique.'
         label: LIEU
       - title: Horaires
-        text: Nous sommes là chaque semaine. Les créneaux sont annoncés sur Instagram et via notre newsletter.
+        text: 'Nous proposons des ateliers tous les dimanches de 14 h à 16 h, mais également le samedi matin et l’après-midi, selon le planning que vous trouverez sur notre site.'
         label: HORAIRES
       - title: L'Esprit
         text: 'Collectif, ouvert, sans pression. Ici, on ne juge pas les coutures qui ne sont pas droites du premier coup !'
