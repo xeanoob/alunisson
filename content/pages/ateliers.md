@@ -13,15 +13,14 @@ hero:
 
 sections:
   - title: Atelier Alunisson
-    subtitle: 'L''atelier créatif. En une séance, tu réalises un objet de A à Z.'
+    subtitle: L'atelier où tu réalises ta propre création de A à Z
     priceTag: 20 € / personne
     priceSub: Tout inclus !
-    description: 'En une séance, tu réalises un objet de A à Z : sac, trousse, gant de cuisine, doudou, pochette… On t''accompagne à chaque étape, et tu repars avec ta création !'
+    description: 'C’est ta création ! Durant l’atelier, tu choisiras ce que tu veux réaliser parmi une sélection préalablement établie, tu choisiras également ton tissu et enfin, tu finiras par le coudre !'
     features:
-      - 5 personnes maximum
+      - '5 personnes maximum '
       - Tu repars avec ta création
-      - Tous niveaux (on adapte)
-      - Info Lab Orléans
+      - Réservation obligatoire !
     image: /uploads/creations_wax.png
     buttonText: Réserver une place
     buttonLink: /rejoindre
