@@ -6,7 +6,7 @@ hero:
   description: |-
     Alunisson, c'est une association loi 1901 créée à Orléans par un groupe de passionnés de couture et de créativité textile. Le constat était simple : les machines à coudre coûtent cher, les ateliers individuels aussi, et coudre seul·e chez soi c'est pas terrible. 
 
-     Alors on a trouvé un local (merci l'Info Lab !), on a acheté des machines Brother, on a ramené nos stocks de tissu wax, de coton, de jersey — et on a ouvert les portes.
+    Alors on a trouvé un local (merci l'Info Lab !), on a acheté des machines Brother, on a ramené nos stocks de tissu wax, de coton, de jersey — et on a ouvert les portes.
   image: /uploads/enfant_groupe.jpg
 sections:
   - title: Ce en quoi on croit
