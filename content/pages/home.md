@@ -17,9 +17,6 @@ sections:
       - title: Atelier - 20€
         text: 'Viens réaliser ta première création !  '
         label: Atelier Alunisson
-      - title: Initiation - Gratuit
-        text: Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance.
-        label: Découverte Sociale
     _template: gridSection
 ---
 
