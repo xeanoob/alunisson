@@ -15,6 +15,8 @@ sections:
         text: 'Vous pouvez participer aux ateliers dès 8 ans, accompagné d''un adulte si besoin. '
       - title: 'Dois-je avoir un certain niveau pour participer ? '
         text: 'Nous acceptons tous les niveaux, de la personne expérimentée à celle qui n’a jamais touché une machine de sa vie. Nous souhaitons passer un moment convivial et rempli de souvenirs.'
+      - title: Est-ce que c'est rapide ?
+        text: 'NON, la couture, c’est tout sauf rapide. Lorsque vous venez participer à nos ateliers, débranchez le cerveau, le téléphone et venez réapprendre à prendre le temps de réaliser quelque chose de vos mains.'
     _template: gridSection
   - title: Infos pratiques
     items:
