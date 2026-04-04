@@ -21,7 +21,7 @@ sections:
   - title: Infos pratiques
     items:
       - title: Le Lieu
-        text: 'Info Lab Orléans (Info Jeunes), 3 rue de la Cholerie. En plein centre ville historique.'
+        text: 'Info Lab Orléans (Info Jeunes), 3 rue de la Cholerie. En plein centre ville d''Orléans.'
         label: LIEU
       - title: Horaires
         text: 'Nous proposons des ateliers tous les dimanches de 14 h à 16 h, mais également le samedi matin et l’après-midi, selon le planning que vous trouverez sur notre site.'
