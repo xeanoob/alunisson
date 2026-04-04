@@ -15,7 +15,7 @@ sections:
       - title: Dépôt pratique
         text: |-
           Vous pouvez les déposer directement à l’atelier (3 rue de la Cholerie, 45000 Orléans) ou, si besoin, nous pouvons nous déplacer.
-          N’hésitez pas à nous contacter via Instagram.
+          N’hésitez pas à nous contacter par mail.
         label: LIEU
     _template: gridSection
   - title: Chaque bobine compte.
