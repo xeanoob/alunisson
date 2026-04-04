@@ -45,14 +45,11 @@ export function Navbar() {
 
   return (
     <>
-      {/* Barre fixe — le background couvre TOUTE la zone y compris derrière le notch */}
+      {/* Barre fixe — fond opaque pour ne pas voir le contenu dans le Dynamic Island */}
       <nav
-        className="fixed top-0 left-0 right-0 z-[1000] border-b border-black/5"
+        className="fixed top-0 left-0 right-0 z-[1000] border-b border-black/5 bg-white"
         style={{
           paddingTop: "env(safe-area-inset-top, 0px)",
-          background: "rgba(255,255,255,0.4)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
         }}
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 md:px-10 h-14">

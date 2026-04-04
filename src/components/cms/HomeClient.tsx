@@ -19,6 +19,8 @@ export function HomeClient(props: {
   });
 
   const content = data.page;
+  const bandeau = (content as Record<string, unknown>).bandeau as { image?: string; title?: string; subtitle?: string } | undefined;
+  const location = (content as Record<string, unknown>).location as { image?: string; title?: string; text?: string } | undefined;
 
   return (
     <main className="w-full">
@@ -29,7 +31,7 @@ export function HomeClient(props: {
         {/* Background Image Immersive */}
         <div className="absolute inset-0">
           <Image
-            src="/equipe_sac.jpg"
+            src={content.hero?.image || "/equipe_sac.jpg"}
             alt="L'équipe Alunisson — Partage et Création"
             fill
             className="object-cover scale-105"
@@ -116,7 +118,7 @@ export function HomeClient(props: {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
             {(() => {
               const gridSection = content.sections?.find((s) => s?.__typename === "PageSectionsGridSection");
-              type GridType = { items?: Array<{ title?: string | null, text?: string | null, label?: string | null } | null> | null };
+              type GridType = { items?: Array<{ title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null };
               const grid = gridSection as unknown as GridType;
               const w1 = grid?.items?.[0] || {};
               const w2 = grid?.items?.[1] || {};
@@ -132,7 +134,7 @@ export function HomeClient(props: {
                   >
                     <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
                       <Image
-                        src="/creations_wax.png"
+                        src={w1.image || "/creations_wax.png"}
                         alt="Création Éco-responsable Alunisson"
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -165,7 +167,7 @@ export function HomeClient(props: {
                   >
                     <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-2">
                       <Image
-                        src="/enfant_groupe.jpg"
+                        src={w2.image || "/enfant_groupe.jpg"}
                         alt="Initiation couture"
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -199,16 +201,16 @@ export function HomeClient(props: {
       <section className="w-full px-6 md:px-10 py-6">
         <div className="max-w-[1400px] mx-auto relative rounded-2xl overflow-hidden h-64 md:h-80">
           <Image
-            src="/tissus_table.jpg"
-            alt="Table de coupe couverte de tissus wax colorés"
+            src={bandeau?.image || "/tissus_table.jpg"}
+            alt="Bandeau Alunisson"
             fill
             className="object-cover"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
             <p className="font-serif text-white text-2xl md:text-4xl text-center px-6 leading-snug">
-              On fournit tout le matériel.<br />
-              <span className="text-white/70 text-lg md:text-2xl">Viens comme tu es.</span>
+              {bandeau?.title || "On fournit tout le matériel."}<br />
+              <span className="text-white/70 text-lg md:text-2xl">{bandeau?.subtitle || "Viens comme tu es."}</span>
             </p>
           </div>
         </div>
@@ -251,8 +253,8 @@ export function HomeClient(props: {
           {/* Photo immersive du lieu/matériel */}
           <div className="relative w-full lg:w-1/2 aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl offset-hand-1 border-[10px] border-white z-10">
             <Image 
-              src="/tissus_table.jpg" 
-              alt="Table de couture Alunisson" 
+              src={location?.image || "/tissus_table.jpg"} 
+              alt="Lieu Alunisson" 
               fill 
               className="object-cover" 
             />
