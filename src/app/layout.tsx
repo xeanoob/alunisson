@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Alunisson Orléans"
   },
   description:
-    "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers créatifs, initiations gratuites et couture pour tous.",
+    "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers créatifs et couture pour tous.",
   keywords: ["couture", "diy", "Orléans", "association", "collaboratif", "couture pour tous", "textile", "vêtements"],
   authors: [{ name: "Alunisson", url: "https://alunisson.fr" }],
   creator: "Alunisson",

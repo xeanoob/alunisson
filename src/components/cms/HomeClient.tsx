@@ -127,12 +127,12 @@ export function HomeClient(props: {
                 <>
                   {/* Atelier Créatif & Circulaire */}
                   <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="group relative"
+                    className="group relative max-w-2xl mx-auto"
                   >
-                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
+                    <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
                       <Image
                         src={w1.image || "/creations_wax.png"}
                         alt="Création Éco-responsable Alunisson"
@@ -154,39 +154,6 @@ export function HomeClient(props: {
                         className="inline-block bg-accent text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md"
                       >
                         Je réserve ma place
-                      </Link>
-                    </div>
-                  </motion.div>
-
-                  {/* Atelier Initiation */}
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="group relative md:mt-24"
-                  >
-                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-2">
-                      <Image
-                        src={w2.image || "/enfant_groupe.jpg"}
-                        alt="Initiation couture"
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-black/10" />
-                      <div className="absolute top-6 right-6 bg-eco-green text-white px-4 py-2 rounded-sm text-xs font-bold shadow-lg rotate-3">
-                        {w2.title || "Initiation — Gratuit"}
-                      </div>
-                    </div>
-                    <div className="bg-white p-8 rounded-2xl stitched shadow-xl -mt-20 relative z-10 mx-6">
-                      <h3 className="font-serif text-2xl mb-3">{w2.label || "Découverte Sociale"}</h3>
-                      <p className="text-muted text-sm leading-relaxed mb-6 italic">
-                        "{w2.text || "Apprendre ensemble. Idéal pour s'initier aux machines dans un espace de bienveillance."}"
-                      </p>
-                      <Link
-                        href="/initiations"
-                        className="inline-block border-2 border-foreground text-foreground px-8 py-3 rounded-full font-bold hover:bg-foreground hover:text-white transition-all shadow-md"
-                      >
-                        Découvrir le format
                       </Link>
                     </div>
                   </motion.div>
@@ -269,19 +236,18 @@ export function HomeClient(props: {
       <section className="w-full py-16 md:py-24 px-6 border-b border-border">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-5xl mb-6 leading-tight">
-            Envie d'essayer ?
+            Envie de coudre ?
           </h2>
           <p className="text-muted text-base mb-10 leading-relaxed">
-            L'atelier initiation est <strong className="text-foreground">gratuit</strong>.
-            Tu n'as besoin de rien amener.<br />
-            Juste de la curiosité.
+            Réservez votre créneau pour un atelier créatif et repartez avec votre création.<br />
+            On fournit tout le matériel nécessaire.
           </p>
           <Link
             href="/rejoindre"
             className="inline-block bg-accent text-white font-semibold text-sm uppercase tracking-wider
                        px-10 py-4 rounded-full hover:bg-foreground hover:scale-105 transition-all duration-300 shadow-md"
           >
-            Je m'inscris
+            Réserver un atelier
           </Link>
         </div>
       </section>

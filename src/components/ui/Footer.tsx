@@ -45,7 +45,6 @@ export function Footer() {
           <h4 className="font-serif text-lg font-semibold lg:text-xl">Navigation</h4>
           <div className="flex flex-col gap-2">
             <Link href="/ateliers" className="text-sm text-muted hover:text-accent transition-colors">Nos ateliers</Link>
-            <Link href="/initiations" className="text-sm text-muted hover:text-accent transition-colors">Nos initiations</Link>
             <Link href="/creations" className="text-sm text-muted hover:text-accent transition-colors">Créations</Link>
             <Link href="/aider" className="text-sm text-muted hover:text-accent transition-colors">Nous aider</Link>
           </div>

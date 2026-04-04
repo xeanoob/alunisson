@@ -104,8 +104,7 @@ export function RejoindreClient(props: {
               <div className="bg-foreground text-background rounded-2xl p-6">
                 <h3 className="font-serif text-lg mb-3">Tarifs</h3>
                 <p className="text-sm text-background/70 leading-relaxed">
-                  Atelier Alunisson : <strong className="text-background">20 €</strong><br />
-                  Initiation : <strong className="text-accent">Gratuit</strong>
+                  Atelier Alunisson : <strong className="text-background">20 €</strong>
                 </p>
               </div>
             </div>

@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return resolveMetadata(
     result.data,
     "Réserver une place | Alunisson Orléans",
-    "Prêt à coudre ? Réservez votre créneau pour nos prochains ateliers Alunisson ou nos initiations gratuites."
+    "Prêt à coudre ? Réservez votre créneau pour nos prochains ateliers Alunisson."
   );
 }
 

@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return resolveMetadata(
     result.data,
     "Alunisson — Couture Collaborative à Orléans (45)",
-    "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers créatifs, initiations gratuites et couture pour tous."
+    "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers créatifs et couture pour tous."
   );
 }
 
