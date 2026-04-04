@@ -14,8 +14,8 @@ sections:
         label: LIEU
       - title: Ateliers
         text: |-
-          Atelier Alunisson — 20 € (5 places) 
-           Atelier Initiation — Gratuit
+          Atelier Alunisson - 20 € (5 places) 
+          Atelier Initiation - Gratuit
         label: INFOS
       - title: Contact direct
         text: |-
