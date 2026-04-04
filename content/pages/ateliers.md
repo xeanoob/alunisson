@@ -40,7 +40,7 @@ sections:
       - title: Tarifs
         text: |-
           Atelier Alunisson : 20 € 
-           Initiation : Gratuit
+          Initiation : Gratuit
       - title: Lieu
         text: |-
           Info Lab Orléans 
