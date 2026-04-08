@@ -46,7 +46,7 @@ export function InfosClient(props: {
       <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[800px] mx-auto h-[300px] md:h-80 relative rounded-3xl overflow-hidden shadow-xl border-8 border-white offset-hand-2">
           <Image 
-            src={content.hero?.image || "/creations_wax.png"} 
+            src={content.hero?.image || "/uploads/creations_wax.png"} 
             alt="Illustration Alunisson" 
             fill 
             className="object-cover" 

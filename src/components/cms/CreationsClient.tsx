@@ -71,7 +71,7 @@ export function CreationsClient(props: {
                 >
                   <div className={`relative ${aspects[i % aspects.length]} overflow-hidden rounded-xl bg-border`}>
                     <Image
-                      src={img?.src || "/equipe_sac.jpg"}
+                      src={img?.src || "/uploads/equipe_sac.jpg"}
                       alt={img?.alt || "Création Alunisson"}
                       fill
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
@@ -100,7 +100,7 @@ export function CreationsClient(props: {
                 >
                   <div className={`relative ${c?.label || 'aspect-square'} overflow-hidden rounded-xl bg-border`}>
                     <Image
-                      src={c?.text || "/equipe_sac.jpg"}
+                      src={c?.text || "/uploads/equipe_sac.jpg"}
                       alt={c?.title || "Création Alunisson"}
                       fill
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-700"

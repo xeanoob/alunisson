@@ -45,7 +45,7 @@ export function AiderClient(props: {
       <section className="px-6 md:px-10 pb-16">
         <div className="max-w-[1000px] mx-auto h-[300px] md:h-[450px] relative rounded-[2.5rem] overflow-hidden shadow-2xl offset-hand-1 border-[10px] border-white">
           <Image 
-            src={content.hero?.image || "/tissus_table.jpg"} 
+            src={content.hero?.image || "/uploads/tissus_table.jpg"} 
             alt="Illustration Alunisson" 
             fill 
             className="object-cover" 

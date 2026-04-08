@@ -61,7 +61,7 @@ export function AteliersClient(props: {
                 >
                   <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden md:order-2 m-4 rounded-xl shadow-lg border-2 border-white">
                     <Image
-                      src={section.image || "/creations_wax.png"}
+                      src={section.image || "/uploads/creations_wax.png"}
                       alt={section.title || "Image Alunisson"}
                       fill
                       className="object-cover"

@@ -31,7 +31,7 @@ export function HomeClient(props: {
         {/* Background Image Immersive */}
         <div className="absolute inset-0">
           <Image
-            src={content.hero?.image || "/equipe_sac.jpg"}
+            src={content.hero?.image || "/uploads/equipe_sac.jpg"}
             alt="L'équipe Alunisson — Partage et Création"
             fill
             className="object-cover scale-105"
@@ -125,7 +125,7 @@ export function HomeClient(props: {
                   >
                     <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden mb-8 shadow-2xl tape offset-hand-1">
                       <Image
-                        src={w1.image || "/creations_wax.png"}
+                        src={w1.image || "/uploads/creations_wax.png"}
                         alt="Création Éco-responsable Alunisson"
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -167,7 +167,7 @@ export function HomeClient(props: {
       <section className="w-full px-6 md:px-10 py-6">
         <div className="max-w-[1400px] mx-auto relative rounded-2xl overflow-hidden h-64 md:h-80">
           <Image
-            src={bandeau?.image || "/tissus_table.jpg"}
+            src={bandeau?.image || "/uploads/tissus_table.jpg"}
             alt="Bandeau Alunisson"
             fill
             className="object-cover"
@@ -219,7 +219,7 @@ export function HomeClient(props: {
           {/* Photo immersive du lieu/matériel */}
           <div className="relative w-full lg:w-1/2 aspect-video lg:aspect-square rounded-3xl overflow-hidden shadow-2xl offset-hand-1 border-[10px] border-white z-10">
             <Image 
-              src={location?.image || "/tissus_table.jpg"} 
+              src={location?.image || "/uploads/tissus_table.jpg"} 
               alt="Lieu Alunisson" 
               fill 
               className="object-cover" 

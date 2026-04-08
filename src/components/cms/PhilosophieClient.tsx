@@ -86,7 +86,7 @@ export function PhilosophieClient(props: {
                   className="relative w-full aspect-[21/9] overflow-hidden rounded-lg shadow-2xl border-[12px] border-white offset-hand-1"
                 >
                   <Image 
-                    src={section.image || "/equipe_sac.jpg"} 
+                    src={section.image || "/uploads/equipe_sac.jpg"} 
                     alt={section.caption || "Equipe Alunisson"} 
                     fill 
                     className="object-cover" 
