@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alunisson.eu"),
+  metadataBase: new URL("https://www.alunisson.eu"),
   title: {
     default: "Alunisson — Couture Collaborative à Orléans (45)",
     template: "%s | Alunisson Orléans"
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
   description:
     "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers créatifs et couture pour tous.",
   keywords: ["couture", "diy", "Orléans", "association", "collaboratif", "couture pour tous", "textile", "vêtements"],
-  authors: [{ name: "Alunisson", url: "https://alunisson.eu" }],
+  authors: [{ name: "Alunisson", url: "https://www.alunisson.eu" }],
   creator: "Alunisson",
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://alunisson.eu",
+    url: "https://www.alunisson.eu",
     siteName: "Alunisson",
     title: "Alunisson — Couture Collaborative à Orléans (45)",
     description: "Découvrez Alunisson, l'association de couture collaborative à Orléans. Ateliers couture, entraide et créativité.",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://alunisson.eu",
+    canonical: "https://www.alunisson.eu",
   },
   other: {
     "geo.region": "FR-CVL",
@@ -97,7 +97,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Alunisson",
-              "url": "https://alunisson.eu",
+              "url": "https://www.alunisson.eu",
               "logo": "https://alunisson.eu/logo.png",
               "image": "https://alunisson.eu/og-main.png",
               "description": "Association de couture collaborative à Orléans. Ateliers créatifs pour tous.",

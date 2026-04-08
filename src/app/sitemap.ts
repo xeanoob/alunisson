@@ -1,8 +1,8 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://alunisson.eu";
-  const lastModified = new Date();
+  const baseUrl = "https://www.alunisson.eu"; // Utilisation du domaine principal avec www pour la cohérence
+  const lastModified = new Date().toISOString();
 
   const routes = [
     "",
@@ -13,12 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/rejoindre",
     "/mentions-legales",
-  ].map((route) => ({
+  ];
+
+  return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified,
-    changeFrequency: "weekly" as const,
+    lastModified: lastModified,
+    changeFrequency: "weekly",
     priority: route === "" ? 1 : 0.8,
   }));
-
-  return routes;
 }
