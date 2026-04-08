@@ -1,0 +1,14 @@
+import { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: "https://www.alunisson.eu", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/ateliers", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/philosophie", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/creations", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/aider", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/contact", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/rejoindre", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/mentions-legales", lastModified: new Date() },
+  ];
+}
