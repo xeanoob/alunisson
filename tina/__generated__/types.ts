@@ -232,7 +232,19 @@ export type PageSectionsPolaroidBlock = {
   caption?: Maybe<Scalars['String']['output']>;
 };
 
-export type PageSections = PageSectionsWorkshopBlock | PageSectionsGridSection | PageSectionsRichTextSection | PageSectionsPolaroidBlock;
+export type PageSectionsGallerySectionImages = {
+  __typename?: 'PageSectionsGallerySectionImages';
+  src?: Maybe<Scalars['String']['output']>;
+  alt?: Maybe<Scalars['String']['output']>;
+};
+
+export type PageSectionsGallerySection = {
+  __typename?: 'PageSectionsGallerySection';
+  title?: Maybe<Scalars['String']['output']>;
+  images?: Maybe<Array<Maybe<PageSectionsGallerySectionImages>>>;
+};
+
+export type PageSections = PageSectionsWorkshopBlock | PageSectionsGridSection | PageSectionsRichTextSection | PageSectionsPolaroidBlock | PageSectionsGallerySection;
 
 export type Page = Node & Document & {
   __typename?: 'Page';
@@ -325,11 +337,22 @@ export type PageSectionsPolaroidBlockFilter = {
   caption?: InputMaybe<StringFilter>;
 };
 
+export type PageSectionsGallerySectionImagesFilter = {
+  src?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type PageSectionsGallerySectionFilter = {
+  title?: InputMaybe<StringFilter>;
+  images?: InputMaybe<PageSectionsGallerySectionImagesFilter>;
+};
+
 export type PageSectionsFilter = {
   workshopBlock?: InputMaybe<PageSectionsWorkshopBlockFilter>;
   gridSection?: InputMaybe<PageSectionsGridSectionFilter>;
   richTextSection?: InputMaybe<PageSectionsRichTextSectionFilter>;
   polaroidBlock?: InputMaybe<PageSectionsPolaroidBlockFilter>;
+  gallerySection?: InputMaybe<PageSectionsGallerySectionFilter>;
 };
 
 export type PageFilter = {
@@ -477,11 +500,22 @@ export type PageSectionsPolaroidBlockMutation = {
   caption?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type PageSectionsGallerySectionImagesMutation = {
+  src?: InputMaybe<Scalars['String']['input']>;
+  alt?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type PageSectionsGallerySectionMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  images?: InputMaybe<Array<InputMaybe<PageSectionsGallerySectionImagesMutation>>>;
+};
+
 export type PageSectionsMutation = {
   workshopBlock?: InputMaybe<PageSectionsWorkshopBlockMutation>;
   gridSection?: InputMaybe<PageSectionsGridSectionMutation>;
   richTextSection?: InputMaybe<PageSectionsRichTextSectionMutation>;
   polaroidBlock?: InputMaybe<PageSectionsPolaroidBlockMutation>;
+  gallerySection?: InputMaybe<PageSectionsGallerySectionMutation>;
 };
 
 export type PageMutation = {
@@ -493,14 +527,14 @@ export type PageMutation = {
   sections?: InputMaybe<Array<InputMaybe<PageSectionsMutation>>>;
 };
 
-export type PagePartsFragment = { __typename: 'Page', title: string, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null };
+export type PagePartsFragment = { __typename: 'Page', title: string, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | { __typename: 'PageSectionsGallerySection', title?: string | null, images?: Array<{ __typename: 'PageSectionsGallerySectionImages', src?: string | null, alt?: string | null } | null> | null } | null> | null };
 
 export type PageQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } };
+export type PageQuery = { __typename?: 'Query', page: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | { __typename: 'PageSectionsGallerySection', title?: string | null, images?: Array<{ __typename: 'PageSectionsGallerySectionImages', src?: string | null, alt?: string | null } | null> | null } | null> | null } };
 
 export type PageConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -512,7 +546,7 @@ export type PageConnectionQueryVariables = Exact<{
 }>;
 
 
-export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | null> | null } | null } | null> | null } };
+export type PageConnectionQuery = { __typename?: 'Query', pageConnection: { __typename?: 'PageConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PageConnectionEdges', cursor: string, node?: { __typename: 'Page', id: string, title: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, hero?: { __typename: 'PageHero', title?: string | null, italicTitle?: string | null, description?: string | null, buttonPrimary?: string | null, buttonSecondary?: string | null, image?: string | null } | null, welcome?: { __typename: 'PageWelcome', text?: string | null } | null, bandeau?: { __typename: 'PageBandeau', image?: string | null, title?: string | null, subtitle?: string | null } | null, location?: { __typename: 'PageLocation', image?: string | null, title?: string | null, text?: string | null } | null, sections?: Array<{ __typename: 'PageSectionsWorkshopBlock', title?: string | null, subtitle?: string | null, priceTag?: string | null, priceSub?: string | null, description?: string | null, features?: Array<string | null> | null, image?: string | null, buttonText?: string | null, buttonLink?: string | null } | { __typename: 'PageSectionsGridSection', title?: string | null, items?: Array<{ __typename: 'PageSectionsGridSectionItems', title?: string | null, text?: string | null, label?: string | null, image?: string | null } | null> | null } | { __typename: 'PageSectionsRichTextSection', body?: any | null } | { __typename: 'PageSectionsPolaroidBlock', image?: string | null, caption?: string | null } | { __typename: 'PageSectionsGallerySection', title?: string | null, images?: Array<{ __typename: 'PageSectionsGallerySectionImages', src?: string | null, alt?: string | null } | null> | null } | null> | null } | null } | null> | null } };
 
 export const PagePartsFragmentDoc = gql`
     fragment PageParts on Page {
@@ -572,6 +606,14 @@ export const PagePartsFragmentDoc = gql`
     ... on PageSectionsPolaroidBlock {
       image
       caption
+    }
+    ... on PageSectionsGallerySection {
+      title
+      images {
+        __typename
+        src
+        alt
+      }
     }
   }
 }

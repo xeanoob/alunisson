@@ -115,6 +115,17 @@ export function AteliersClient(props: {
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
                    {section.items?.map((item, i) => (
                       <div key={i}>
+                         {item?.image && (
+                           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden mb-4">
+                             <Image
+                               src={item.image}
+                               alt={item.title || ""}
+                               fill
+                               className="object-cover"
+                               sizes="(max-width: 768px) 100vw, 33vw"
+                             />
+                           </div>
+                         )}
                          <h3 className="font-serif text-xl mb-2">{item?.title}</h3>
                          <div className="text-background/60 text-sm leading-relaxed whitespace-pre-line">
                             {item?.text}

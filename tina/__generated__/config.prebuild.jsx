@@ -129,6 +129,25 @@ var config_default = defineConfig({
                   { type: "image", name: "image", label: "Photo" },
                   { type: "string", name: "caption", label: "L\xE9gende" }
                 ]
+              },
+              // Template Galerie de Créations
+              {
+                name: "gallerySection",
+                label: "Galerie d'images",
+                fields: [
+                  { type: "string", name: "title", label: "Titre de la galerie" },
+                  {
+                    type: "object",
+                    list: true,
+                    name: "images",
+                    label: "Images de la galerie",
+                    ui: { itemProps: (item) => ({ label: item?.alt || "Nouvelle image" }) },
+                    fields: [
+                      { type: "image", name: "src", label: "Image" },
+                      { type: "string", name: "alt", label: "Titre / L\xE9gende" }
+                    ]
+                  }
+                ]
               }
             ]
           }

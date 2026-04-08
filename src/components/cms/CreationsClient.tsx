@@ -18,6 +18,22 @@ export function CreationsClient(props: {
 
   const content = data.page;
 
+  // Aspect ratios for masonry variety
+  const aspects = [
+    "aspect-[4/5]",
+    "aspect-square",
+    "aspect-[3/4]",
+    "aspect-[4/5]",
+    "aspect-[3/4]",
+    "aspect-square",
+    "aspect-[4/5]",
+    "aspect-[3/4]",
+    "aspect-square",
+    "aspect-[4/5]",
+    "aspect-[3/4]",
+    "aspect-square",
+  ];
+
   return (
     <main className="w-full">
       <Navbar />
@@ -42,6 +58,36 @@ export function CreationsClient(props: {
       <section className="px-6 md:px-10 pb-20 md:pb-32">
         <div className="max-w-[1400px] mx-auto columns-1 sm:columns-2 lg:columns-3 gap-4">
           {content.sections?.map((section) => {
+            // Support the new gallerySection template
+            if (section?.__typename === "PageSectionsGallerySection") {
+              return section.images?.map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
+                  className="mb-4 break-inside-avoid group"
+                >
+                  <div className={`relative ${aspects[i % aspects.length]} overflow-hidden rounded-xl bg-border`}>
+                    <Image
+                      src={img?.src || "/equipe_sac.jpg"}
+                      alt={img?.alt || "Création Alunisson"}
+                      fill
+                      className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 flex items-end p-4 rounded-xl">
+                      <span className="text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        {img?.alt}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ));
+            }
+
+            // Legacy support for gridSection (old format)
             if (section?.__typename === "PageSectionsGridSection") {
               return section.items?.map((c, i) => (
                 <motion.div

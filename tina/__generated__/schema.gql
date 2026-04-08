@@ -145,7 +145,17 @@ type PageSectionsPolaroidBlock {
   caption: String
 }
 
-union PageSections = PageSectionsWorkshopBlock | PageSectionsGridSection | PageSectionsRichTextSection | PageSectionsPolaroidBlock
+type PageSectionsGallerySectionImages {
+  src: String
+  alt: String
+}
+
+type PageSectionsGallerySection {
+  title: String
+  images: [PageSectionsGallerySectionImages]
+}
+
+union PageSections = PageSectionsWorkshopBlock | PageSectionsGridSection | PageSectionsRichTextSection | PageSectionsPolaroidBlock | PageSectionsGallerySection
 
 type Page implements Node & Document {
   title: String!
@@ -237,11 +247,22 @@ input PageSectionsPolaroidBlockFilter {
   caption: StringFilter
 }
 
+input PageSectionsGallerySectionImagesFilter {
+  src: ImageFilter
+  alt: StringFilter
+}
+
+input PageSectionsGallerySectionFilter {
+  title: StringFilter
+  images: PageSectionsGallerySectionImagesFilter
+}
+
 input PageSectionsFilter {
   workshopBlock: PageSectionsWorkshopBlockFilter
   gridSection: PageSectionsGridSectionFilter
   richTextSection: PageSectionsRichTextSectionFilter
   polaroidBlock: PageSectionsPolaroidBlockFilter
+  gallerySection: PageSectionsGallerySectionFilter
 }
 
 input PageFilter {
@@ -341,11 +362,22 @@ input PageSectionsPolaroidBlockMutation {
   caption: String
 }
 
+input PageSectionsGallerySectionImagesMutation {
+  src: String
+  alt: String
+}
+
+input PageSectionsGallerySectionMutation {
+  title: String
+  images: [PageSectionsGallerySectionImagesMutation]
+}
+
 input PageSectionsMutation {
   workshopBlock: PageSectionsWorkshopBlockMutation
   gridSection: PageSectionsGridSectionMutation
   richTextSection: PageSectionsRichTextSectionMutation
   polaroidBlock: PageSectionsPolaroidBlockMutation
+  gallerySection: PageSectionsGallerySectionMutation
 }
 
 input PageMutation {

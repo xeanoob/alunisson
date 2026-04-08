@@ -21,7 +21,7 @@ sections:
       - '5 personnes maximum '
       - Tu repars avec ta création
       - Réservation obligatoire !
-    image: /uploads/creations_wax.png
+    image: /creations_wax.png
     buttonText: Réserver une place
     buttonLink: /rejoindre
     _template: workshopBlock
@@ -30,12 +30,15 @@ sections:
       - title: Tarifs
         text: |-
           Atelier Alunisson : 20 € 
+        image: /uploads/creations/equipe-tote-bags.jpg
       - title: Lieu
         text: |-
           Info Lab Orléans 
            3 rue de la Cholerie
+        image: /uploads/creations/atelier-patrons.jpg
       - title: À amener
         text: 'Rien du tout ! On fournit machines, fil, ciseaux et tissus.'
+        image: /tissus_table.jpg
     _template: gridSection
 ---
 

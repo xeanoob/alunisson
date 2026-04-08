@@ -3,13 +3,13 @@ title: Nous Aider
 hero:
   title: Nous aider.
   description: Alunisson vit grâce à l'énergie de ses membres et à la générosité de tous. Voici comment tu peux faire grandir l'association.
-  image: /uploads/tissus_table.jpg
+  image: /tissus_table.jpg
 sections:
   - title: Comment nous aider ?
     items:
       - title: Dons de matériel
         text: |-
-          Vous avez des chutes de tissus, des bobines de fil ou une machine à coudre que vous n’utilisez plus ? Nous les récupérons avec plaisir !
+          Vous avez des chutes de tissus, des bobines de fil ou une machine à coudre que vous n'utilisez plus ? Nous les récupérons avec plaisir !
           Offrez-leur une seconde vie entre les mains de nos adhérents.
         label: MATÉRIEL
       - title: 'Laisse un commentaire '
@@ -23,4 +23,3 @@ sections:
     buttonLink: 'mailto:contact@alunisson.fr'
     _template: workshopBlock
 ---
-

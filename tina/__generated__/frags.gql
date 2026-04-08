@@ -56,5 +56,13 @@ fragment PageParts on Page {
       image
       caption
     }
+    ... on PageSectionsGallerySection {
+      title
+      images {
+        __typename
+        src
+        alt
+      }
+    }
   }
 }

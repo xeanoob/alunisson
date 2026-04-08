@@ -62,13 +62,24 @@ export function AiderClient(props: {
                 <div key={index} className="space-y-10">
                    {section.items?.map((item, i) => (
                       <div key={i} className="p-8 md:p-12 border border-border rounded-3xl bg-white flex flex-col items-center gap-6 shadow-xl stitched offset-hand-1">
+                        {item?.image && (
+                          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-2">
+                            <Image
+                              src={item.image}
+                              alt={item.title || ""}
+                              fill
+                              className="object-cover"
+                              sizes="(max-width: 768px) 100vw, 700px"
+                            />
+                          </div>
+                        )}
                         <div className="w-16 h-16 rounded-full bg-accent-soft flex items-center justify-center text-accent offset-hand-2">
                           <Scissors size={32} />
                         </div>
                         <div className="text-center">
                           <h3 className="font-serif text-3xl md:text-4xl mb-4 italic">{item?.title}</h3>
                           <p className="text-muted leading-relaxed max-w-md mx-auto italic mb-6">
-                            "{item?.text}"
+                            &quot;{item?.text}&quot;
                           </p>
                           <p className="mt-8 text-xs font-bold uppercase tracking-widest text-accent">
                             {item?.label}

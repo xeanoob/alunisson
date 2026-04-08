@@ -90,6 +90,30 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable} ${gochiHand.variable}`} suppressHydrationWarning>
       <body className="antialiased min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Alunisson",
+              "url": "https://alunisson.fr",
+              "logo": "https://alunisson.fr/logo.png",
+              "image": "https://alunisson.fr/og-main.png",
+              "description": "Association de couture collaborative à Orléans. Ateliers créatifs pour tous.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "3 rue de la Cholerie",
+                "addressLocality": "Orléans",
+                "postalCode": "45000",
+                "addressCountry": "FR"
+              },
+              "sameAs": [
+                "https://www.instagram.com/alunisson_association/"
+              ]
+            }),
+          }}
+        />
         <SmoothScroll>
           <div>
             {children}

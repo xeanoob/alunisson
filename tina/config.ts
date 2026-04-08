@@ -132,6 +132,25 @@ export default defineConfig({
                   { type: "string", name: "caption", label: "Légende" },
                 ],
               },
+              // Template Galerie de Créations
+              {
+                name: "gallerySection",
+                label: "Galerie d'images",
+                fields: [
+                  { type: "string", name: "title", label: "Titre de la galerie" },
+                  {
+                    type: "object",
+                    list: true,
+                    name: "images",
+                    label: "Images de la galerie",
+                    ui: { itemProps: (item) => ({ label: item?.alt || "Nouvelle image" }) },
+                    fields: [
+                      { type: "image", name: "src", label: "Image" },
+                      { type: "string", name: "alt", label: "Titre / Légende" },
+                    ],
+                  },
+                ],
+              },
             ],
           },
         ],
