@@ -1,15 +1,16 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://alunisson.fr";
+  const baseUrl = "https://alunisson.eu";
   const lastModified = new Date();
 
   const routes = [
     "",
     "/ateliers",
-    "/aider",
     "/philosophie",
-    "/infos",
+    "/creations",
+    "/aider",
+    "/contact",
     "/rejoindre",
     "/mentions-legales",
   ].map((route) => ({
