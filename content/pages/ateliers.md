@@ -21,7 +21,7 @@ sections:
       - '5 personnes maximum '
       - Tu repars avec ta création
       - Réservation obligatoire !
-    image: /creations_wax.png
+    image: /uploads/creations_wax.png
     buttonText: Réserver une place
     buttonLink: /rejoindre
     _template: workshopBlock
@@ -38,7 +38,7 @@ sections:
         image: /uploads/creations/atelier-patrons.jpg
       - title: À amener
         text: 'Rien du tout ! On fournit machines, fil, ciseaux et tissus.'
-        image: /tissus_table.jpg
+        image: /uploads/tissus_table.jpg
     _template: gridSection
 ---
 

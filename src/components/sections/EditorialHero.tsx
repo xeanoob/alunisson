@@ -163,7 +163,7 @@ export function EditorialHero() {
              className="absolute top-56 md:top-40 left-8 md:left-24 w-64 md:w-80 aspect-[4/5] bg-[#F8F9FA] p-2 md:p-3 pb-12 md:pb-16 shadow-[0_30px_50px_rgba(0,0,0,0.6)] border border-gray-200 z-30"
            >
               <div className="relative w-full h-full border border-gray-300">
-                <Image src="/hero_sewing.png" alt="Atelier" fill className="object-cover filter contrast-[1.1] grayscale-[0.1]" priority sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image src="/hero_machine.png" alt="Atelier" fill className="object-cover filter contrast-[1.1] grayscale-[0.1]" priority sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="absolute top-2 left-4 w-3 h-3 rounded-full bg-yellow-400 shadow-[0_5px_5px_rgba(0,0,0,0.6)] z-50 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-[2px] after:h-[2px] after:bg-white/80 after:rounded-full" />
               <div className="absolute top-2 right-4 w-3 h-3 rounded-full bg-blue-500 shadow-[0_5px_5px_rgba(0,0,0,0.6)] z-50 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-[2px] after:h-[2px] after:bg-white/80 after:rounded-full" />

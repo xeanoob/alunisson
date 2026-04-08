@@ -17,21 +17,21 @@ sections:
           Cerisaie, de Michel Ronfard et du Plissay. Les enfants découvrent le
           plaisir de créer de leurs propres mains.
         label: SCOLAIRE
-        image: /olivet.jpg
+        image: /uploads/actions/olivet.jpg
       - title: La Fabrique du Textile
         text: >-
           Participation à des événements majeurs comme au CIJ d'Orléans pour
           promouvoir l'upcycling, la customisation et le libre-service machine.
         label: ÉVÉNEMENT
-        image: /textile.jpg
+        image: /uploads/actions/textile.jpg
       - title: Ateliers Bibliothèques
         text: >-
           Ateliers thématiques comme la création de tote-bags à la bibliothèque
           de Fleury-les-Aubrais, accessibles à tous les niveaux.
         label: CULTUREL
-        image: /bibliotheque.jpg
+        image: /uploads/actions/bibliotheque.jpg
     _template: gridSection
-  - image: /enfant_groupe.jpg
+  - image: /uploads/actions/enfant_groupe.jpg
     caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
     _template: polaroidBlock
   - title: Actions Sociales & Inclusion
@@ -41,13 +41,13 @@ sections:
           Accompagnement de jeunes en difficulté à travers des projets concrets :
           réalisation de patrons et couture de vide-poches muraux originaux.
         label: SOCIAL
-        image: /odas.png
+        image: /uploads/actions/odas.png
       - title: Transmission & Partage
         text: >-
           Au-delà de la technique, nos ateliers sont des espaces de rencontre où
           l'entraide et le partage de matériaux sont au cœur de l'apprentissage.
         label: VALEURS
-        image: /donation-partage.jpg
+        image: /uploads/actions/donation-partage.jpg
     _template: gridSection
   - title: Informations Pratiques 2026
     items:
