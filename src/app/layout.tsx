@@ -60,6 +60,10 @@ export const metadata: Metadata = {
     description: "La couture pour tous à Orléans.",
     images: ["/og-main.png"],
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
   robots: {
     index: true,
     follow: true,
