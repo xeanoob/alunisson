@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://www.alunisson.eu/aider", lastModified: new Date() },
     { url: "https://www.alunisson.eu/contact", lastModified: new Date() },
     { url: "https://www.alunisson.eu/rejoindre", lastModified: new Date() },
+    { url: "https://www.alunisson.eu/infos", lastModified: new Date() },
     { url: "https://www.alunisson.eu/mentions-legales", lastModified: new Date() },
   ];
 }
