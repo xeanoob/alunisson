@@ -6,7 +6,7 @@ hero:
   description: Alunisson
   buttonPrimary: Réserver un atelier
   buttonSecondary: Découvrir l'association
-  image: /uploads/creations/creation-7.jpg
+  image: /uploads/IMG_0850.jpeg
 welcome:
   text: |
     Nous proposons des cours de couture accessibles dès l’âge de 8 ans. Notre objectif est de rendre la couture accessible à tous, avec des prix abordables, dans un cadre bienveillant et inclusif.
