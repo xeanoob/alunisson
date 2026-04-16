@@ -15,6 +15,7 @@ sections:
       - src: /uploads/creations/sac-wax-rouge.jpg
       - src: /uploads/creations/tote-bag-afrique.jpg
       - src: /uploads/creations/creation-11.jpg
+      - src: /uploads/creations/atelier-patrons.jpg
     _template: gallerySection
 ---
 
