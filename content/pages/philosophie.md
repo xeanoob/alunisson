@@ -17,9 +17,9 @@ sections:
         label: ÉVÉNEMENT
         image: /uploads/Capture d'écran 2026-04-16 212459.png
       - title: Ateliers Bibliothèques
-        text: 'Ateliers thématiques comme la création de tote-bags à la bibliothèque de Fleury-les-Aubrais, accessibles à tous les niveaux.'
+        text: 'Création de tote-bag à la bibliothèque de Fleury-les-Aubrais, accessibles à tous les niveaux.'
         label: CULTUREL
-        image: /uploads/actions/bibliotheque.jpg
+        image: /uploads/Capture d'écran 2026-04-16 212749.png
     _template: gridSection
   - image: /uploads/actions/enfant_groupe.jpg
     caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
