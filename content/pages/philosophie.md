@@ -20,7 +20,10 @@ sections:
         text: 'Création de tote-bag à la bibliothèque de Fleury-les-Aubrais, accessibles à tous les niveaux.'
         label: CULTUREL
         image: /uploads/Capture d'écran 2026-04-16 212749.png
-      - {}
+      - title: ODAS
+        text: 'Atelier au CRIJ (Centre Régional d’Information Jeunesse) aujourd''hui renommée, “Infos Jeunes”, pour des jeunes en situation de rupture (scolaire, familiale etc.…)  '
+        label: SOCIAL
+        image: /uploads/IMG_1565.jpeg
     _template: gridSection
   - image: /uploads/actions/enfant_groupe.jpg
     caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
