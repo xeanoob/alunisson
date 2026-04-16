@@ -6,7 +6,7 @@ hero:
   description: Petit retour sur les actions que nous avons menées ensemble ces trois dernières années !
   image: /uploads/actions/social-inclusion-1.jpg
 sections:
-  - title: Nos interventions scolaires
+  - title: 'Toutes nos interventions ! '
     items:
       - title: Ville d'Olivet
         text: 'Tout au long de l’année scolaire 2023-2024, nous avons animé chaque jeudi des interventions dans les écoles élémentaires du Poutyl, de la Cerisaie, de Michel Ronfard et du Plissay. Une belle occasion pour les enfants de découvrir le plaisir de créer de leurs propres mains !'
