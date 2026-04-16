@@ -13,6 +13,7 @@ sections:
       - src: /uploads/IMG_1556.jpeg
       - src: /uploads/IMG_1564.jpeg
       - src: /uploads/creations/sac-wax-rouge.jpg
+      - src: /uploads/creations/tote-bag-afrique.jpg
     _template: gallerySection
 ---
 
