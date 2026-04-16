@@ -12,6 +12,7 @@ sections:
           Infolab 
           3 rue de la Cholerie 45000 Orléans
         label: LIEU
+        image: /uploads/32422419-5901-4353-8675-7a00c74699fc.jpg
       - title: Ateliers
         text: |
           Atelier ALUNISSON - 20 € (5 places) 
