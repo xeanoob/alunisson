@@ -10,7 +10,7 @@ sections:
       - src: /uploads/creations/equipe-tote-bags.jpg
         alt: ''
       - src: /uploads/creations/enfant-couture-detail.jpg
-        alt: Détail couture — Création enfant
+        alt: ''
       - src: /uploads/creations/sac-wax-rouge.jpg
         alt: Sac en wax rouge
       - src: /uploads/creations/tote-bag-afrique.jpg
