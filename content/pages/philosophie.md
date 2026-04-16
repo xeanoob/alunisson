@@ -24,6 +24,13 @@ sections:
         text: 'Atelier au CRIJ (Centre Régional d’Information Jeunesse) aujourd''hui renommée, “Infos Jeunes”, pour des jeunes en situation de rupture (scolaire, familiale etc.…)  '
         label: SOCIAL
         image: /uploads/IMG_1565.jpeg
+      - title: ONELA
+        text: |-
+          Atelier avec l’équipe ONELA (organisme de service à domicile à Orléans)
+          Un beau moment de partage avec une équipe engagée dans l’aide à domicile.
+
+          Merci à toutes pour votre énergie et votre investissement 
+        image: /uploads/32422419-5901-4353-8675-7a00c74699fc.jpg
     _template: gridSection
   - image: /uploads/actions/enfant_groupe.jpg
     caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
