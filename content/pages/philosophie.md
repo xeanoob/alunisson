@@ -9,9 +9,9 @@ sections:
   - title: Nos interventions scolaires
     items:
       - title: Ville d'Olivet
-        text: 'Chaque jeudi, nous intervenons dans les écoles du Poutyl, de la Cerisaie, de Michel Ronfard et du Plissay. Les enfants découvrent le plaisir de créer de leurs propres mains.'
+        text: 'Tout au long de l’année scolaire 2023-2024, nous avons animé chaque jeudi des interventions dans les écoles élémentaires du Poutyl, de la Cerisaie, de Michel Ronfard et du Plissay. Une belle occasion pour les enfants de découvrir le plaisir de créer de leurs propres mains !'
         label: SCOLAIRE
-        image: /uploads/actions/olivet.jpg
+        image: /uploads/9344E9AF-6936-47DD-852F-2681CE1DB930.jpeg
       - title: La Fabrique du Textile
         text: 'Participation à des événements majeurs comme au CIJ d''Orléans pour promouvoir l''upcycling, la customisation et le libre-service machine.'
         label: ÉVÉNEMENT
