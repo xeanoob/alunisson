@@ -8,7 +8,7 @@ sections:
   - title: Notre Portfolio
     images:
       - src: /uploads/creations/equipe-tote-bags.jpg
-        alt: Tote bags Afrique — Atelier collectif
+        alt: ''
       - src: /uploads/creations/enfant-couture-detail.jpg
         alt: Détail couture — Création enfant
       - src: /uploads/creations/sac-wax-rouge.jpg
@@ -33,3 +33,4 @@ sections:
         alt: Atelier groupe enfants
     _template: gallerySection
 ---
+
