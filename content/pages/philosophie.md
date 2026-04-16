@@ -13,9 +13,9 @@ sections:
         label: SCOLAIRE
         image: /uploads/9344E9AF-6936-47DD-852F-2681CE1DB930.jpeg
       - title: La Fabrique du Textile
-        text: 'Participation à des événements majeurs comme au CIJ d''Orléans pour promouvoir l''upcycling, la customisation et le libre-service machine.'
+        text: 'Participation à des événements majeurs comme au CIJ d''Orléans pour promouvoir l''upcycling, la customisation et la petite création ! '
         label: ÉVÉNEMENT
-        image: /uploads/actions/textile.jpg
+        image: /uploads/Capture d'écran 2026-04-16 212459.png
       - title: Ateliers Bibliothèques
         text: 'Ateliers thématiques comme la création de tote-bags à la bibliothèque de Fleury-les-Aubrais, accessibles à tous les niveaux.'
         label: CULTUREL
