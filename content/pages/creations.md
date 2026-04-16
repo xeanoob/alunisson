@@ -8,6 +8,11 @@ sections:
   - title: Notre Portfolio
     images:
       - src: /uploads/32422419-5901-4353-8675-7a00c74699fc.jpg
+      - src: /uploads/C5D02F62-957B-4F7F-B6C9-E51391F5FC3E.jpeg
+      - {}
+      - {}
+      - {}
+      - {}
     _template: gallerySection
 ---
 
