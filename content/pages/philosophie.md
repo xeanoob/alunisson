@@ -31,6 +31,9 @@ sections:
 
           Merci à toutes pour votre énergie et votre investissement 
         image: /uploads/32422419-5901-4353-8675-7a00c74699fc.jpg
+      - title: Association Ytinéraire
+        text: 'Ytinéraire, est un organisme spécialisé dans l’accompagnement des étudiants internationaux dans la construction et la réalisation de leurs projets d’études et de mobilité à destination de la France.'
+        image: /uploads/IMG_0850.jpeg
     _template: gridSection
   - image: /uploads/actions/enfant_groupe.jpg
     caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
