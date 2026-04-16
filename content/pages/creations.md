@@ -11,8 +11,8 @@ sections:
       - src: /uploads/C5D02F62-957B-4F7F-B6C9-E51391F5FC3E.jpeg
       - src: /uploads/IMG_1555.jpeg
       - src: /uploads/IMG_1556.jpeg
-      - {}
-      - {}
+      - src: /uploads/IMG_1564.jpeg
+      - src: /uploads/creations/sac-wax-rouge.jpg
     _template: gallerySection
 ---
 
