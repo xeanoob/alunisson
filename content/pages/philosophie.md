@@ -20,20 +20,12 @@ sections:
         text: 'Création de tote-bag à la bibliothèque de Fleury-les-Aubrais, accessibles à tous les niveaux.'
         label: CULTUREL
         image: /uploads/Capture d'écran 2026-04-16 212749.png
+      - {}
     _template: gridSection
   - image: /uploads/actions/enfant_groupe.jpg
     caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
     _template: polaroidBlock
-  - title: Actions Sociales & Inclusion
-    items:
-      - title: Association ODAS
-        text: 'Accompagnement de jeunes en difficulté à travers des projets concrets : réalisation de patrons et couture de vide-poches muraux originaux.'
-        label: SOCIAL
-        image: /uploads/actions/odas.png
-      - title: Transmission & Partage
-        text: 'Au-delà de la technique, nos ateliers sont des espaces de rencontre où l''entraide et le partage de matériaux sont au cœur de l''apprentissage.'
-        label: VALEURS
-        image: /uploads/actions/donation-partage.jpg
+  - title: ''
     _template: gridSection
   - title: Informations Pratiques 2026
     items:
