@@ -18,6 +18,7 @@ sections:
       - src: /uploads/creations/atelier-patrons.jpg
       - src: /uploads/actions/scolaire-repassage.jpg
       - src: /uploads/IMG_0850.jpeg
+      - src: /uploads/IMG_1558.jpeg
     _template: gallerySection
 ---
 
