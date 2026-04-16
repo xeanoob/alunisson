@@ -11,7 +11,7 @@ sections:
       - src: /uploads/C5D02F62-957B-4F7F-B6C9-E51391F5FC3E.jpeg
       - src: /uploads/IMG_1555.jpeg
       - src: /uploads/IMG_1556.jpeg
-      - src: /uploads/IMG_1564.jpeg
+      - src: /uploads/BD48A077-8A5D-44C0-B7F7-DC827A6B5802.jpeg
       - src: /uploads/creations/sac-wax-rouge.jpg
       - src: /uploads/creations/tote-bag-afrique.jpg
       - src: /uploads/creations/creation-11.jpg
