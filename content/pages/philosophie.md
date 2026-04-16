@@ -35,8 +35,8 @@ sections:
         text: 'Ytinéraire, est un organisme spécialisé dans l’accompagnement des étudiants internationaux dans la construction et la réalisation de leurs projets d’études et de mobilité à destination de la France.'
         image: /uploads/IMG_0850.jpeg
     _template: gridSection
-  - image: /uploads/actions/enfant_groupe.jpg
-    caption: Nos ateliers créatifs au cœur des écoles d'Olivet.
+  - image: /uploads/IMG_2137.jpeg
+    caption: 'L''atelier ! '
     _template: polaroidBlock
   - title: ''
     _template: gridSection
