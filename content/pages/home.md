@@ -8,9 +8,9 @@ hero:
   buttonSecondary: Découvrir l'association
   image: /uploads/IMG_0850.jpeg
 welcome:
-  text: |
+  text: |+
     Nous proposons des cours de couture accessibles dès l’âge de 8 ans. Notre objectif est de rendre la couture accessible à tous, avec des prix abordables, dans un cadre bienveillant et inclusif.
-    Chaque séance est adaptée au niveau et au rythme de chacun, avec un accompagnement personnalisé. 
+
 sections:
   - title: Nos ateliers phares
     items:
