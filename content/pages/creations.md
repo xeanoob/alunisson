@@ -16,6 +16,7 @@ sections:
       - src: /uploads/creations/tote-bag-afrique.jpg
       - src: /uploads/creations/creation-11.jpg
       - src: /uploads/creations/atelier-patrons.jpg
+      - src: /uploads/actions/scolaire-repassage.jpg
     _template: gallerySection
 ---
 
