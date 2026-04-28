@@ -3,7 +3,7 @@ title: Réserver
 hero:
   title: Réserver.
   description: 'Choisis un créneau qui te convient directement dans le calendrier. '
-  image: /uploads/32422419-5901-4353-8675-7a00c74699fc.jpg
+  image: /uploads/BD48A077-8A5D-44C0-B7F7-DC827A6B5802.jpeg
 sections:
   - title: Contact & Lieu
     items:
